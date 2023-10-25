@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/searchHeroFragment">
+
+    <fragment
+        android:id="@+id/searchHeroFragment"
+        android:name="com.jroslar.heroapp.ui.searchhero.SearchHeroFragment"
+        android:label="fragment_search_hero"
+        tools:layout="@layout/fragment_search_hero" />
+    <fragment
+        android:id="@+id/infoHeroFragment"
+        android:name="com.jroslar.heroapp.ui.infohero.InfoHeroFragment"
+        android:label="fragment_info_hero"
+        tools:layout="@layout/fragment_info_hero" />
+    <fragment
+        android:id="@+id/logsHeroFragment"
+        android:name="com.jroslar.heroapp.ui.logshero.LogsHeroFragment"
+        android:label="fragment_logs_hero"
+        tools:layout="@layout/fragment_logs_hero" />
+</navigation>
