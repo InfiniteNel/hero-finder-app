@@ -7,7 +7,7 @@
     <color name="primaryLight">#DFCCFB</color>
     <color name="primaryDark">#BEADFA</color>
     <color name="secondary">#FFF8C9</color>
-    <color name="accent">#FFFFFFFF</color>
+    <color name="accent">#FF000000</color>
 
     <color name="red">#FF0000</color>
 </resources>
