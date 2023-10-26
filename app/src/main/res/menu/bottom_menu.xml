@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/searchHeroFragment"
+        android:title="@string/buscar"
+        android:icon="@drawable/ic_buscar" />
+
+    <item android:id="@+id/infoHeroFragment"
+        android:title="@string/heroe"
+        android:icon="@drawable/ic_heroe" />
+
+    <item android:id="@+id/logsHeroFragment"
+        android:title="@string/aleatorio"
+        android:icon="@drawable/ic_aleatorio" />
+</menu>

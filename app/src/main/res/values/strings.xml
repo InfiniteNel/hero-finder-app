@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">HeroFinder</string>
+
+    <!-- BottomBar -->
+    <string name="buscar">Buscar</string>
+    <string name="aleatorio">Aleatorio</string>
+    <string name="heroe">Héroe</string>
 </resources>
