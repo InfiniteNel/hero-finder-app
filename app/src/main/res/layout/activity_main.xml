@@ -22,13 +22,11 @@
 
             <TextView
                 android:id="@+id/customTitleToolbar"
+                style="@style/Title1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-smallcaps"
                 android:text="@string/app_name"
-                android:textColor="@color/secondary"
-                android:textSize="30sp"
-                android:textStyle="bold" />
+                android:textColor="@color/secondary"/>
         </androidx.appcompat.widget.Toolbar>
     </com.google.android.material.appbar.AppBarLayout>
 
