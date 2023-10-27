@@ -9,7 +9,7 @@ import com.jroslar.heroapp.domain.model.HeroModel
 class SearchHeroViewHolder(private val view: View): RecyclerView.ViewHolder(view) {
 
     private val binding = ItemHeroBinding.bind(view)
-    fun bind(heroModel: HeroModel) {
+    fun bind(heroModel: HeroModel, onItemSelect: (HeroModel) -> Unit) {
         binding.tvListHeroName.text = heroModel.name
         binding.tvListHeroPublisher.text = heroModel.biography.publisher
 
@@ -17,5 +17,7 @@ class SearchHeroViewHolder(private val view: View): RecyclerView.ViewHolder(view
             .with(view)
             .load(heroModel.image.url)
             .into(binding.ivListHeroAvatar)
+
+        binding.root.setOnClickListener { onItemSelect(heroModel) }
     }
 }

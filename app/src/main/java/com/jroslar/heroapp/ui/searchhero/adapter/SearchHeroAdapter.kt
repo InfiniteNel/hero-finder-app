@@ -6,7 +6,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.jroslar.heroapp.R
 import com.jroslar.heroapp.domain.model.HeroModel
 
-class SearchHeroAdapter(private var heroList: List<HeroModel> = emptyList()) :
+class SearchHeroAdapter(private var heroList: List<HeroModel> = emptyList(),
+    private val onItemSelect:(HeroModel) -> Unit) :
     RecyclerView.Adapter<SearchHeroViewHolder>() {
 
     fun updateList(list: List<HeroModel>) {
@@ -23,6 +24,6 @@ class SearchHeroAdapter(private var heroList: List<HeroModel> = emptyList()) :
     override fun getItemCount() = heroList.size
 
     override fun onBindViewHolder(holder: SearchHeroViewHolder, position: Int) {
-        holder.bind(heroList[position])
+        holder.bind(heroList[position], onItemSelect)
     }
 }
