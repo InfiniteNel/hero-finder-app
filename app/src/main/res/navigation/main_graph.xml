@@ -9,7 +9,11 @@
         android:id="@+id/searchHeroFragment"
         android:name="com.jroslar.heroapp.ui.searchhero.SearchHeroFragment"
         android:label="fragment_search_hero"
-        tools:layout="@layout/fragment_search_hero" />
+        tools:layout="@layout/fragment_search_hero" >
+        <action
+            android:id="@+id/action_searchHeroFragment_to_detailHeroFragment"
+            app:destination="@id/detailHeroFragment" />
+    </fragment>
     <fragment
         android:id="@+id/favHeroFragment"
         android:name="com.jroslar.heroapp.ui.favhero.FavHeroFragment"
@@ -20,4 +24,13 @@
         android:name="com.jroslar.heroapp.ui.randomhero.RandomHeroFragment"
         android:label="fragment_random_hero"
         tools:layout="@layout/fragment_random_hero" />
+    <fragment
+        android:id="@+id/detailHeroFragment"
+        android:name="com.jroslar.heroapp.ui.detailhero.DetailHeroFragment"
+        android:label="fragment_detail_hero"
+        tools:layout="@layout/fragment_detail_hero">
+        <argument
+            android:name="hero"
+            app:argType="com.jroslar.heroapp.domain.model.HeroModel"/>
+    </fragment>
 </navigation>
