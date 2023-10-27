@@ -6,7 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.jroslar.heroapp.databinding.FragmentLogsHeroBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class LogsHeroFragment : Fragment() {
 
     private var _binding:FragmentLogsHeroBinding? = null

@@ -12,8 +12,10 @@ import androidx.lifecycle.repeatOnLifecycle
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.jroslar.heroapp.databinding.FragmentSearchHeroBinding
 import com.jroslar.heroapp.ui.searchhero.adapter.SearchHeroAdapter
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
+@AndroidEntryPoint
 class SearchHeroFragment : Fragment() {
 
     private var _binding:FragmentSearchHeroBinding? = null

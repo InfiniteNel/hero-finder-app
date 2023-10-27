@@ -7,10 +7,13 @@ import com.jroslar.heroapp.domain.model.HeroModel
 import com.jroslar.heroapp.domain.model.ImageModel
 import com.jroslar.heroapp.domain.model.PowerstatsModel
 import com.jroslar.heroapp.domain.model.WorkModel
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
+import javax.inject.Inject
 
-class SearchHeroViewModel: ViewModel() {
+@HiltViewModel
+class SearchHeroViewModel @Inject constructor() : ViewModel() {
 
     private var _heroList = MutableStateFlow<List<HeroModel>>(emptyList())
     val heroList: StateFlow<List<HeroModel>> = _heroList
