@@ -11,13 +11,13 @@
         android:label="fragment_search_hero"
         tools:layout="@layout/fragment_search_hero" />
     <fragment
-        android:id="@+id/infoHeroFragment"
-        android:name="com.jroslar.heroapp.ui.infohero.InfoHeroFragment"
-        android:label="fragment_info_hero"
-        tools:layout="@layout/fragment_info_hero" />
+        android:id="@+id/favHeroFragment"
+        android:name="com.jroslar.heroapp.ui.favhero.FavHeroFragment"
+        android:label="fragment_fav_hero"
+        tools:layout="@layout/fragment_fav_hero" />
     <fragment
-        android:id="@+id/logsHeroFragment"
-        android:name="com.jroslar.heroapp.ui.logshero.LogsHeroFragment"
-        android:label="fragment_logs_hero"
-        tools:layout="@layout/fragment_logs_hero" />
+        android:id="@+id/randomHeroFragment"
+        android:name="com.jroslar.heroapp.ui.randomhero.RandomHeroFragment"
+        android:label="fragment_random_hero"
+        tools:layout="@layout/fragment_random_hero" />
 </navigation>

@@ -4,11 +4,11 @@
         android:title="@string/buscar"
         android:icon="@drawable/ic_buscar" />
 
-    <item android:id="@+id/infoHeroFragment"
+    <item android:id="@+id/favHeroFragment"
         android:title="@string/heroe"
         android:icon="@drawable/ic_heroe" />
 
-    <item android:id="@+id/logsHeroFragment"
+    <item android:id="@+id/randomHeroFragment"
         android:title="@string/aleatorio"
         android:icon="@drawable/ic_aleatorio" />
 </menu>
