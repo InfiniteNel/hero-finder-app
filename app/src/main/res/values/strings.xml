@@ -5,4 +5,20 @@
     <string name="buscar">Buscar</string>
     <string name="aleatorio">Aleatorio</string>
     <string name="heroe">Héroe</string>
+
+    <!-- DetailHeroFragment -->
+    <string name="tvFullNameText">Nombre completo</string>
+    <string name="tvAlterEgosText">Alter Egos</string>
+    <string name="tvAliasesText">Alias</string>
+    <string name="tvPlaceBirthText">Lugar de nacimiento</string>
+    <string name="tvFirstAppearanceText">"Primera aparición "</string>
+    <string name="tvPublisherText">Editorial</string>
+    <string name="tvAlignmentText">Alineación</string>
+    <string name="tvBiographyText">Biografía</string>
+    <string name="tvAppearanceText">Apariencia</string>
+    <string name="tvGenderText">Genero</string>
+    <string name="tvRaceText">Raza</string>
+    <string name="tvWorkText">Trabajo</string>
+    <string name="tvOccupationText">Ocupación</string>
+    <string name="tvBaseText">Base</string>
 </resources>

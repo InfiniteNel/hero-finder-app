@@ -1,15 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="TitleItems">
+    <style name="BaseText">
+        <item name="fontFamily">sans-serif-smallcaps</item>
+    </style>
+
+    <style name="TitleItems" parent="BaseText">
         <item name="android:textSize">20sp</item>
         <item name="android:textAlignment">center</item>
-        <item name="fontFamily">sans-serif-smallcaps</item>
         <item name="android:lines">1</item>
     </style>
-    <style name="SubtitleItems">
+    <style name="SubtitleItems" parent="BaseText">
         <item name="android:textSize">14sp</item>
         <item name="android:textAlignment">center</item>
-        <item name="fontFamily">sans-serif-smallcaps</item>
         <item name="android:lines">1</item>
+    </style>
+
+    <style name="Title1" parent="BaseText">
+        <item name="android:textSize">32sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="Title2" parent="BaseText">
+        <item name="android:textSize">24sp</item>
+    </style>
+    <style name="Subtitle1" parent="BaseText">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="NormalWithoutFontText">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <!-- DetailHeroFragment -->
+    <style name="DivideDetailHero" parent="Title2">
+        <item name="android:textAlignment">center</item>
+        <item name="android:background">@drawable/divide_detail_shape</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">20dp</item>
+    </style>
+    <style name="DetailHeroText" parent="Subtitle1">
+        <item name="android:textColor">@color/secondary</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="DetailHeroTextData" parent="NormalWithoutFontText">
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
     </style>
 </resources>

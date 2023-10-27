@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/primary"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.detailhero.DetailHeroFragment">
+
+        <ImageView
+            android:id="@+id/ivHeroAvatar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/avatars" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/dlMarginLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="20dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/dlMarginRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="20dp" />
+
+
+        <TextView
+            android:id="@+id/tvHeroName"
+            style="@style/Title1"
+            android:textAlignment="textStart"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toStartOf="@+id/dlMarginRight"
+            app:layout_constraintStart_toStartOf="@+id/dlMarginLeft"
+            app:layout_constraintTop_toBottomOf="@+id/ivHeroAvatar"
+            tools:text="Cyborg Superman" />
+
+        <TextView
+            android:id="@+id/tvBiography"
+            style="@style/DivideDetailHero"
+            android:text="@string/tvBiographyText"
+            app:layout_constraintEnd_toStartOf="@+id/dlMarginRight"
+            app:layout_constraintStart_toStartOf="@+id/dlMarginLeft"
+            app:layout_constraintTop_toBottomOf="@+id/tvHeroName"/>
+
+        <TextView
+            android:id="@+id/tvFullName"
+            style="@style/DetailHeroText"
+            android:text="@string/tvFullNameText"
+            app:layout_constraintBottom_toBottomOf="@+id/tvFullNameData"
+            app:layout_constraintStart_toStartOf="@+id/dlMarginLeft"
+            app:layout_constraintTop_toTopOf="@+id/tvFullNameData"/>
+        <TextView
+            android:id="@+id/tvFullNameData"
+            style="@style/DetailHeroTextData"
+            app:layout_constraintEnd_toStartOf="@+id/dlMarginRight"
+            app:layout_constraintStart_toEndOf="@+id/tvFullName"
+            app:layout_constraintTop_toBottomOf="@+id/tvBiography"/>
+
+        <TextView
+            android:id="@+id/tvAlterEgos"
+            style="@style/DetailHeroText"
+            android:text="@string/tvAlterEgosText"
+            app:layout_constraintBottom_toBottomOf="@+id/tvAlterEgosData"
+            app:layout_constraintStart_toStartOf="@+id/dlMarginLeft"
+            app:layout_constraintTop_toTopOf="@+id/tvAlterEgosData" />
+        <TextView
+            android:id="@+id/tvAlterEgosData"
+            style="@style/DetailHeroTextData"
+            app:layout_constraintEnd_toStartOf="@+id/dlMarginRight"
+            app:layout_constraintStart_toEndOf="@+id/tvAlterEgos"
+            app:layout_constraintTop_toBottomOf="@+id/tvFullNameData" />
+
+        <TextView
+            android:id="@+id/tvAliases"
+            style="@style/DetailHeroText"
+            android:text="@string/tvAliasesText"
+            app:layout_constraintBottom_toBottomOf="@+id/tvAliasesData"
+            app:layout_constraintStart_toStartOf="@+id/dlMarginLeft"
+            app:layout_constraintTop_toTopOf="@+id/tvAliasesData" />
+        <TextView
+            android:id="@+id/tvAliasesData"
+            style="@style/DetailHeroTextData"
+            app:layout_constraintEnd_toStartOf="@+id/dlMarginRight"
+            app:layout_constraintStart_toEndOf="@+id/tvAliases"
+            app:layout_constraintTop_toBottomOf="@+id/tvAlterEgosData" />
+
+        <TextView
+            android:id="@+id/tvPlaceBirth"
+            style="@style/DetailHeroText"
+            android:text="@string/tvPlaceBirthText"
+            app:layout_constraintBottom_toBottomOf="@+id/tvPlaceBirthData"
+            app:layout_constraintStart_toStartOf="@+id/dlMarginLeft"
+            app:layout_constraintTop_toTopOf="@+id/tvPlaceBirthData" />
+        <TextView
+            android:id="@+id/tvPlaceBirthData"
+            style="@style/DetailHeroTextData"
+            app:layout_constraintEnd_toStartOf="@+id/dlMarginRight"
+            app:layout_constraintStart_toEndOf="@+id/tvPlaceBirth"
+            app:layout_constraintTop_toBottomOf="@+id/tvAliasesData" />
+
+        <TextView
+            android:id="@+id/tvFirstAppearance"
+            style="@style/DetailHeroText"
+            android:text="@string/tvFirstAppearanceText"
+            app:layout_constraintBottom_toBottomOf="@+id/tvFirstAppearanceData"
+            app:layout_constraintStart_toStartOf="@+id/dlMarginLeft"
+            app:layout_constraintTop_toTopOf="@+id/tvFirstAppearanceData" />
+        <TextView
+            android:id="@+id/tvFirstAppearanceData"
+            style="@style/DetailHeroTextData"
+            app:layout_constraintEnd_toStartOf="@+id/dlMarginRight"
+            app:layout_constraintStart_toEndOf="@+id/tvFirstAppearance"
+            app:layout_constraintTop_toBottomOf="@+id/tvPlaceBirthData"/>
+
+        <TextView
+            android:id="@+id/tvPublisher"
+            style="@style/DetailHeroText"
+            android:text="@string/tvPublisherText"
+            app:layout_constraintBottom_toBottomOf="@+id/tvPublisherData"
+            app:layout_constraintStart_toStartOf="@+id/dlMarginLeft"
+            app:layout_constraintTop_toTopOf="@+id/tvPublisherData" />
+        <TextView
+            android:id="@+id/tvPublisherData"
+            style="@style/DetailHeroTextData"
+            app:layout_constraintEnd_toStartOf="@+id/dlMarginRight"
+            app:layout_constraintStart_toEndOf="@+id/tvPublisher"
+            app:layout_constraintTop_toBottomOf="@+id/tvFirstAppearanceData" />
+
+        <TextView
+            android:id="@+id/tvAlignment"
+            style="@style/DetailHeroText"
+            android:text="@string/tvAlignmentText"
+            app:layout_constraintBottom_toBottomOf="@+id/tvAlignmentData"
+            app:layout_constraintStart_toStartOf="@+id/dlMarginLeft"
+            app:layout_constraintTop_toTopOf="@+id/tvAlignmentData" />
+        <TextView
+            android:id="@+id/tvAlignmentData"
+            style="@style/DetailHeroTextData"
+            app:layout_constraintEnd_toStartOf="@+id/dlMarginRight"
+            app:layout_constraintStart_toEndOf="@+id/tvAlignment"
+            app:layout_constraintTop_toBottomOf="@+id/tvPublisherData"/>
+
+
+        <TextView
+            android:id="@+id/tvAppearance"
+            style="@style/DivideDetailHero"
+            android:text="@string/tvAppearanceText"
+            app:layout_constraintEnd_toStartOf="@+id/dlMarginRight"
+            app:layout_constraintStart_toStartOf="@+id/dlMarginLeft"
+            app:layout_constraintTop_toBottomOf="@+id/tvAlignmentData"/>
+
+        <TextView
+            android:id="@+id/tvGender"
+            style="@style/DetailHeroText"
+            android:text="@string/tvGenderText"
+            app:layout_constraintBottom_toBottomOf="@+id/tvGenderData"
+            app:layout_constraintStart_toStartOf="@+id/dlMarginLeft"
+            app:layout_constraintTop_toTopOf="@+id/tvGenderData" />
+        <TextView
+            android:id="@+id/tvGenderData"
+            style="@style/DetailHeroTextData"
+            app:layout_constraintEnd_toStartOf="@+id/dlMarginRight"
+            app:layout_constraintStart_toEndOf="@+id/tvGender"
+            app:layout_constraintTop_toBottomOf="@+id/tvAppearance"/>
+
+        <TextView
+            android:id="@+id/tvRace"
+            style="@style/DetailHeroText"
+            android:text="@string/tvRaceText"
+            app:layout_constraintBottom_toBottomOf="@+id/tvRaceData"
+            app:layout_constraintStart_toStartOf="@+id/dlMarginLeft"
+            app:layout_constraintTop_toTopOf="@+id/tvRaceData" />
+        <TextView
+            android:id="@+id/tvRaceData"
+            style="@style/DetailHeroTextData"
+            app:layout_constraintEnd_toStartOf="@+id/dlMarginRight"
+            app:layout_constraintStart_toEndOf="@+id/tvRace"
+            app:layout_constraintTop_toBottomOf="@+id/tvGenderData"/>
+
+
+        <TextView
+            android:id="@+id/tvWork"
+            style="@style/DivideDetailHero"
+            android:text="@string/tvWorkText"
+            app:layout_constraintEnd_toStartOf="@+id/dlMarginRight"
+            app:layout_constraintStart_toStartOf="@+id/dlMarginLeft"
+            app:layout_constraintTop_toBottomOf="@+id/tvRaceData"/>
+
+        <TextView
+            android:id="@+id/tvOccupation"
+            style="@style/DetailHeroText"
+            android:text="@string/tvOccupationText"
+            app:layout_constraintBottom_toBottomOf="@+id/tvOccupationData"
+            app:layout_constraintStart_toStartOf="@+id/dlMarginLeft"
+            app:layout_constraintTop_toTopOf="@+id/tvOccupationData" />
+        <TextView
+            android:id="@+id/tvOccupationData"
+            style="@style/DetailHeroTextData"
+            app:layout_constraintEnd_toStartOf="@+id/dlMarginRight"
+            app:layout_constraintStart_toEndOf="@+id/tvOccupation"
+            app:layout_constraintTop_toBottomOf="@+id/tvWork"/>
+
+        <TextView
+            android:id="@+id/tvBase"
+            style="@style/DetailHeroText"
+            android:text="@string/tvBaseText"
+            app:layout_constraintBottom_toBottomOf="@+id/tvBaseData"
+            app:layout_constraintStart_toStartOf="@+id/dlMarginLeft"
+            app:layout_constraintTop_toTopOf="@+id/tvBaseData" />
+        <TextView
+            android:id="@+id/tvBaseData"
+            style="@style/DetailHeroTextData"
+            app:layout_constraintEnd_toStartOf="@+id/dlMarginRight"
+            app:layout_constraintStart_toEndOf="@+id/tvBase"
+            app:layout_constraintTop_toBottomOf="@+id/tvOccupationData"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
