@@ -1,5 +1,8 @@
 package com.jroslar.heroapp.domain.model
 
+import android.os.Parcel
+import android.os.Parcelable
+
 data class HeroModel (
     val id: String,
     val name: String,
@@ -8,7 +11,36 @@ data class HeroModel (
     val appearance: AppearanceModel,
     val work: WorkModel,
     val image: ImageModel
-)
+): Parcelable {
+    constructor(parcel: Parcel) : this(
+        parcel.readString()!!,
+        parcel.readString()!!,
+        TODO("powerstats"),
+        TODO("biography"),
+        TODO("appearance"),
+        TODO("work"),
+        TODO("image")
+    )
+
+    override fun writeToParcel(parcel: Parcel, flags: Int) {
+        parcel.writeString(id)
+        parcel.writeString(name)
+    }
+
+    override fun describeContents(): Int {
+        return 0
+    }
+
+    companion object CREATOR : Parcelable.Creator<HeroModel> {
+        override fun createFromParcel(parcel: Parcel): HeroModel {
+            return HeroModel(parcel)
+        }
+
+        override fun newArray(size: Int): Array<HeroModel?> {
+            return arrayOfNulls(size)
+        }
+    }
+}
 
 data class PowerstatsModel (
     val intelligence: String,
