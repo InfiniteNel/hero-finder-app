@@ -45,20 +45,22 @@ class DetailHeroFragment : Fragment() {
             .load(detailHero.image.url)
             .into(binding.ivHeroAvatar)
 
-        binding.tvHeroName.text = detailHero.name
+        binding.apply {
+            tvHeroName.text = detailHero.name
 
-        binding.tvFullNameData.text = detailHero.biography.full_name
-        binding.tvAlterEgosData.text = detailHero.biography.alter_egos
-        binding.tvAliasesData.text = detailHero.biography.aliases.toString()
-        binding.tvPlaceBirthData.text = detailHero.biography.place_of_birth
-        binding.tvFirstAppearanceData.text = detailHero.biography.first_appearance
-        binding.tvPublisherData.text = detailHero.biography.publisher
-        binding.tvAlignmentData.text = detailHero.biography.alignment
+            tvFullNameData.text = detailHero.biography.full_name
+            tvAlterEgosData.text = detailHero.biography.alter_egos
+            tvAliasesData.text = detailHero.biography.aliases.toString()
+            tvPlaceBirthData.text = detailHero.biography.place_of_birth
+            tvFirstAppearanceData.text = detailHero.biography.first_appearance
+            tvPublisherData.text = detailHero.biography.publisher
+            tvAlignmentData.text = detailHero.biography.alignment
 
-        binding.tvGenderData.text = detailHero.appearance.gender
-        binding.tvRaceData.text = detailHero.appearance.race
+            tvGenderData.text = detailHero.appearance.gender
+            tvRaceData.text = detailHero.appearance.race
 
-        binding.tvOccupationData.text = detailHero.work.occupation
-        binding.tvBaseData.text = detailHero.work.base
+            tvOccupationData.text = detailHero.work.occupation
+            tvBaseData.text = detailHero.work.base
+        }
     }
 }
