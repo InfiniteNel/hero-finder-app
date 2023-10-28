@@ -21,12 +21,24 @@ android {
     }
 
     buildTypes {
-        release {
+        getByName("release") {
             isMinifyEnabled = false
+            isDebuggable = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+
+            resValue("string", "app_value", "HeroFinder")
+
+            buildConfigField("String", "BASE_URL", "\"https://superheroapi.com/api/10229233666327556/search/\"")
+        }
+        getByName("debug") {
+            isDebuggable = true
+
+            resValue("string", "app_value", "HeroFinder - Debug")
+
+            buildConfigField("String", "BASE_URL", "\"https://superheroapi.com/api/10229233666327556/search/\"")
         }
     }
     compileOptions {
@@ -38,6 +50,7 @@ android {
     }
     buildFeatures {
         viewBinding = true
+        buildConfig = true
     }
 }
 
