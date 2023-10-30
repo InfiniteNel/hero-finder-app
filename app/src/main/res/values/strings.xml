@@ -28,4 +28,8 @@
     <string name="tvWorkText">Trabajo</string>
     <string name="tvOccupationText">Ocupación</string>
     <string name="tvBaseText">Base</string>
+
+    <!-- SearchHeroFragment -->
+    <string name="tvTitleResultText">Resultado para: \t</string>
+    <string name="tvTitleResultTextError">Sin conexión a la pagina</string>
 </resources>
