@@ -20,14 +20,38 @@
         app:searchHintIcon="@null"
         app:iconifiedByDefault="false"/>
 
+    <TextView
+        android:id="@+id/tvTitleResult"
+        style="@style/Subtitle1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:lines="1"
+        android:text="@string/tvTitleResultText"
+        app:layout_constraintEnd_toEndOf="@+id/svSearchHero"
+        app:layout_constraintStart_toStartOf="@+id/svSearchHero"
+        app:layout_constraintTop_toBottomOf="@+id/svSearchHero" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvSearchHeroList"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/svSearchHero"
-        app:layout_constraintStart_toStartOf="@+id/svSearchHero"
-        app:layout_constraintTop_toBottomOf="@+id/svSearchHero" />
+        app:layout_constraintEnd_toEndOf="@+id/tvTitleResult"
+        app:layout_constraintStart_toStartOf="@+id/tvTitleResult"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitleResult" />
+
+    <ImageView
+        android:id="@+id/ivState"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitleResult"
+        tools:srcCompat="@drawable/busqueda_result"/>
 
     <ProgressBar
         android:id="@+id/pbSearchHeroList"
