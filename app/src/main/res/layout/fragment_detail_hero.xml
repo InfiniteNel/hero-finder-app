@@ -157,13 +157,107 @@
             app:layout_constraintTop_toBottomOf="@+id/tvPublisherData"/>
 
 
+
+        <TextView
+            android:id="@+id/tvPowerstats"
+            style="@style/DivideDetailHero"
+            android:text="@string/tvPowerstatsText"
+            app:layout_constraintEnd_toStartOf="@+id/dlMarginRight"
+            app:layout_constraintStart_toStartOf="@+id/dlMarginLeft"
+            app:layout_constraintTop_toBottomOf="@+id/tvAlignmentData"/>
+
+        <TextView
+            android:id="@+id/tvintelligence"
+            style="@style/DetailHeroText"
+            android:text="@string/tvintelligenceText"
+            app:layout_constraintBottom_toBottomOf="@+id/tvintelligenceData"
+            app:layout_constraintStart_toStartOf="@+id/dlMarginLeft"
+            app:layout_constraintTop_toTopOf="@+id/tvintelligenceData" />
+        <TextView
+            android:id="@+id/tvintelligenceData"
+            style="@style/DetailHeroTextData"
+            app:layout_constraintEnd_toStartOf="@+id/dlMarginRight"
+            app:layout_constraintStart_toEndOf="@+id/tvintelligence"
+            app:layout_constraintTop_toBottomOf="@+id/tvPowerstats"/>
+
+        <TextView
+            android:id="@+id/tvstrength"
+            style="@style/DetailHeroText"
+            android:text="@string/tvstrengthText"
+            app:layout_constraintBottom_toBottomOf="@+id/tvstrengthData"
+            app:layout_constraintStart_toStartOf="@+id/dlMarginLeft"
+            app:layout_constraintTop_toTopOf="@+id/tvstrengthData" />
+        <TextView
+            android:id="@+id/tvstrengthData"
+            style="@style/DetailHeroTextData"
+            app:layout_constraintEnd_toStartOf="@+id/dlMarginRight"
+            app:layout_constraintStart_toEndOf="@+id/tvstrength"
+            app:layout_constraintTop_toBottomOf="@+id/tvintelligenceData"/>
+
+        <TextView
+            android:id="@+id/tvspeed"
+            style="@style/DetailHeroText"
+            android:text="@string/tvspeedText"
+            app:layout_constraintBottom_toBottomOf="@+id/tvspeedData"
+            app:layout_constraintStart_toStartOf="@+id/dlMarginLeft"
+            app:layout_constraintTop_toTopOf="@+id/tvspeedData" />
+        <TextView
+            android:id="@+id/tvspeedData"
+            style="@style/DetailHeroTextData"
+            app:layout_constraintEnd_toStartOf="@+id/dlMarginRight"
+            app:layout_constraintStart_toEndOf="@+id/tvspeed"
+            app:layout_constraintTop_toBottomOf="@+id/tvstrengthData"/>
+
+        <TextView
+            android:id="@+id/tvdurability"
+            style="@style/DetailHeroText"
+            android:text="@string/tvdurabilityText"
+            app:layout_constraintBottom_toBottomOf="@+id/tvdurabilityData"
+            app:layout_constraintStart_toStartOf="@+id/dlMarginLeft"
+            app:layout_constraintTop_toTopOf="@+id/tvdurabilityData" />
+        <TextView
+            android:id="@+id/tvdurabilityData"
+            style="@style/DetailHeroTextData"
+            app:layout_constraintEnd_toStartOf="@+id/dlMarginRight"
+            app:layout_constraintStart_toEndOf="@+id/tvdurability"
+            app:layout_constraintTop_toBottomOf="@+id/tvspeedData"/>
+
+        <TextView
+            android:id="@+id/tvpower"
+            style="@style/DetailHeroText"
+            android:text="@string/tvpowerText"
+            app:layout_constraintBottom_toBottomOf="@+id/tvpowerData"
+            app:layout_constraintStart_toStartOf="@+id/dlMarginLeft"
+            app:layout_constraintTop_toTopOf="@+id/tvpowerData" />
+        <TextView
+            android:id="@+id/tvpowerData"
+            style="@style/DetailHeroTextData"
+            app:layout_constraintEnd_toStartOf="@+id/dlMarginRight"
+            app:layout_constraintStart_toEndOf="@+id/tvpower"
+            app:layout_constraintTop_toBottomOf="@+id/tvdurabilityData"/>
+
+        <TextView
+            android:id="@+id/tvcombat"
+            style="@style/DetailHeroText"
+            android:text="@string/tvcombatText"
+            app:layout_constraintBottom_toBottomOf="@+id/tvcombatData"
+            app:layout_constraintStart_toStartOf="@+id/dlMarginLeft"
+            app:layout_constraintTop_toTopOf="@+id/tvcombatData" />
+        <TextView
+            android:id="@+id/tvcombatData"
+            style="@style/DetailHeroTextData"
+            app:layout_constraintEnd_toStartOf="@+id/dlMarginRight"
+            app:layout_constraintStart_toEndOf="@+id/tvcombat"
+            app:layout_constraintTop_toBottomOf="@+id/tvpowerData"/>
+
+
         <TextView
             android:id="@+id/tvAppearance"
             style="@style/DivideDetailHero"
             android:text="@string/tvAppearanceText"
             app:layout_constraintEnd_toStartOf="@+id/dlMarginRight"
             app:layout_constraintStart_toStartOf="@+id/dlMarginLeft"
-            app:layout_constraintTop_toBottomOf="@+id/tvAlignmentData"/>
+            app:layout_constraintTop_toBottomOf="@+id/tvcombatData"/>
 
         <TextView
             android:id="@+id/tvGender"

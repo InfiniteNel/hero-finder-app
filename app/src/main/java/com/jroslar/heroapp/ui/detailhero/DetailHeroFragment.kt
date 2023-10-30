@@ -37,6 +37,7 @@ class DetailHeroFragment : Fragment() {
         initData()
     }
 
+    //Inicializa los datos del modelo de datos en la vista
     private fun initData() {
         val detailHero = args.hero
 
@@ -55,6 +56,13 @@ class DetailHeroFragment : Fragment() {
             tvFirstAppearanceData.text = detailHero.biography.first_appearance
             tvPublisherData.text = detailHero.biography.publisher
             tvAlignmentData.text = detailHero.biography.alignment
+
+            tvintelligenceData.text = detailHero.powerstats.intelligence
+            tvstrengthData.text = detailHero.powerstats.strength
+            tvspeedData.text = detailHero.powerstats.speed
+            tvdurabilityData.text = detailHero.powerstats.durability
+            tvpowerData.text = detailHero.powerstats.power
+            tvcombatData.text = detailHero.powerstats.combat
 
             tvGenderData.text = detailHero.appearance.gender
             tvRaceData.text = detailHero.appearance.race
