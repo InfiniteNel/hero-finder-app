@@ -22,4 +22,16 @@ class HeroRepositoryImpl @Inject constructor(private val apiService: HeroApiServ
 
         return null
     }
+
+    override suspend fun getHeroById(heroId: Int): HeroModel? {
+        kotlin.runCatching { apiService.getHeroById(heroId) }
+            .onSuccess {
+                if (it.id != null) {
+                    return it.toModelHero()
+                }
+            }
+            .onFailure { Log.i("HeroFinder", "Error: ${it.message}") }
+
+        return null
+    }
 }
