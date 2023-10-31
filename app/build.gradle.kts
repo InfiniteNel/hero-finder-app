@@ -31,14 +31,14 @@ android {
 
             resValue("string", "app_value", "HeroFinder")
 
-            buildConfigField("String", "BASE_URL", "\"https://superheroapi.com/api/10229233666327556/search/\"")
+            buildConfigField("String", "BASE_URL", "\"https://superheroapi.com/api/10229233666327556/\"")
         }
         getByName("debug") {
             isDebuggable = true
 
             resValue("string", "app_value", "HeroFinder - Debug")
 
-            buildConfigField("String", "BASE_URL", "\"https://superheroapi.com/api/10229233666327556/search/\"")
+            buildConfigField("String", "BASE_URL", "\"https://superheroapi.com/api/10229233666327556/\"")
         }
     }
     compileOptions {

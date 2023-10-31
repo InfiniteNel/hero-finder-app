@@ -5,6 +5,6 @@ import retrofit2.http.GET
 import retrofit2.http.Path
 
 interface HeroApiService {
-    @GET("{name}")
+    @GET("search/{name}")
     suspend fun getListHeroByName(@Path("name") heroName:String): ListHeroResponse
 }
