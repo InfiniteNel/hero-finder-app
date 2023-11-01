@@ -43,3 +43,5 @@ Pantalla que muestra la información del Héroe seleccionado en la pantalla Sear
 <a href="https://www.flaticon.es/iconos-gratis/preguntas-mas-frecuentes" title="preguntas más frecuentes iconos">Preguntas más frecuentes iconos creados por Freepik - Flaticon</a>
 
 <a href="https://www.flaticon.es/iconos-gratis/no-hay-resultados" title="no hay resultados iconos">No hay resultados iconos creados por kmg design - Flaticon</a> 
+
+<a href="https://www.flaticon.es/iconos-gratis/signo-de-interrogacion" title="signo de interrogación iconos">Signo de interrogación iconos creados por apien - Flaticon</a>
