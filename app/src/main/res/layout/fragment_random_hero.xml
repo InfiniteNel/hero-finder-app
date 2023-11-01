@@ -1,8 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sfRandomHero"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.randomhero.RandomHeroFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.randomhero.RandomHeroFragment">
 
-</FrameLayout>
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/dlMarginLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="20dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/dlMarginRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="20dp" />
+
+        <TextView
+            android:id="@+id/tvIdRandom"
+            style="@style/Title3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="@string/tvIdRandomText"
+            app:layout_constraintBottom_toTopOf="@+id/cvAvatarRandom"
+            app:layout_constraintEnd_toEndOf="@id/dlMarginRight"
+            app:layout_constraintStart_toStartOf="@id/dlMarginLeft" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvAvatarRandom"
+            android:layout_width="0dp"
+            android:layout_height="400dp"
+            android:scaleType="center"
+            android:backgroundTint="@color/primaryDark"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/dlMarginRight"
+            app:layout_constraintStart_toStartOf="@id/dlMarginLeft"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/ivAvatarRandom"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitXY"
+                android:src="@drawable/signo_interrogacion" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tvNameRandom"
+            style="@style/Title2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textAlignment="center"
+            android:text="@string/tvRandomHeroText"
+            app:layout_constraintEnd_toStartOf="@+id/dlMarginRight"
+            app:layout_constraintStart_toStartOf="@+id/dlMarginLeft"
+            app:layout_constraintTop_toBottomOf="@+id/cvAvatarRandom"/>
+
+        <TextView
+            android:id="@+id/tvPublisherRandom"
+            style="@style/Subtitle1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/tvRandomHeroText"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toStartOf="@+id/dlMarginRight"
+            app:layout_constraintStart_toStartOf="@+id/dlMarginLeft"
+            app:layout_constraintTop_toBottomOf="@+id/tvNameRandom" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

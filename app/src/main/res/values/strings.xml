@@ -32,4 +32,8 @@
     <!-- SearchHeroFragment -->
     <string name="tvTitleResultText">Resultado para: \t</string>
     <string name="tvTitleResultTextError">Sin conexión a la pagina</string>
+
+    <!-- RandomHeroFragment -->
+    <string name="tvIdRandomText">ID: \t</string>
+    <string name="tvRandomHeroText">\? ? ? ?</string>
 </resources>
