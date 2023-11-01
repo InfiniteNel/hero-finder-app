@@ -34,7 +34,7 @@
     </style>
 
     <!-- DetailHeroFragment -->
-    <style name="DivideDetailHero" parent="Title2">
+    <style name="DivideDetailHero" parent="Title3">
         <item name="android:textAlignment">center</item>
         <item name="android:background">@drawable/divide_detail_shape</item>
         <item name="android:padding">5dp</item>
