@@ -20,6 +20,9 @@
         <item name="android:textStyle">bold</item>
     </style>
     <style name="Title2" parent="BaseText">
+        <item name="android:textSize">28sp</item>
+    </style>
+    <style name="Title3" parent="BaseText">
         <item name="android:textSize">24sp</item>
     </style>
     <style name="Subtitle1" parent="BaseText">
