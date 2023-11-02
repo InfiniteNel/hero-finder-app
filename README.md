@@ -21,6 +21,12 @@ Pantalla de búsqueda de héroe. Al usar la barra de búsqueda envía una petici
 
 Pantalla que muestra la información del Héroe seleccionado en la pantalla SearchHero. La información que muestra es una imagen del Héroe, su nombre, su Biografía, sus estadística, su apariencia y su trabajo.
 
+### RandomHero
+![RandomHero](https://i.imgur.com/KXxbuTF.png)
+![RandomHero](https://i.imgur.com/GsMs0K7.png)
+
+Pantalla que muestra una tarjeta que al hacer clic sobre la misma muestra un Héroe aleatorio de la API. Al hacer scroll hacia abajo hace una petición de un nuevo Héroe aleatorio a la API y muestra nuevamente la tarjeta vacía.
+
 ## Construido con 🛠️
 
 * [Kotlin](https://developer.android.com/kotlin/learn?hl=es-419) - Es un lenguaje de programación multiplataforma, estáticamente tipado, de alto nivel y propósito general con inferencia de tipos.
@@ -31,6 +37,7 @@ Pantalla que muestra la información del Héroe seleccionado en la pantalla Sear
 * [Glide](https://github.com/bumptech/glide) - Carga y almacenamiento en caché de imágenes.
 * [DaggerHilt](https://developer.android.com/training/dependency-injection/hilt-android?hl=es-419) - Inyección de dependencias.
 * [Retrofit](https://square.github.io/retrofit/) - Peticiones webs.
+* [SwipeRefreshLayout](https://developer.android.com/jetpack/androidx/releases/swiperefreshlayout?hl=es-419) - Mecanismo estándar para actualizar el contenido de una vista.
 
 ## Creditos ✍️
 
