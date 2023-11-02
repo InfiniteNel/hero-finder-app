@@ -20,7 +20,8 @@ class RandomHeroViewModel  @Inject constructor(private val getHeroByIdUseCase: G
     private var _state = MutableStateFlow<RandomHeroState>(RandomHeroState.Loading)
     val state: StateFlow<RandomHeroState> = _state
 
-    private var data: HeroModel? = null
+    private var _data = MutableStateFlow<HeroModel?>(null)
+    val data: StateFlow<HeroModel?> = _data
 
     init {
         getNewRandomHero()
@@ -37,7 +38,7 @@ class RandomHeroViewModel  @Inject constructor(private val getHeroByIdUseCase: G
                 _state.value = RandomHeroState.Error
             } else {
                 _state.value = RandomHeroState.Hidden
-                data = result
+                _data.value = result
             }
         }
     }
@@ -47,7 +48,7 @@ class RandomHeroViewModel  @Inject constructor(private val getHeroByIdUseCase: G
         if (data == null) {
             _state.value = RandomHeroState.Error
         } else {
-            _state.value = RandomHeroState.Reveal(data!!)
+            _state.value = RandomHeroState.Reveal(data.value!!)
         }
     }
 }
