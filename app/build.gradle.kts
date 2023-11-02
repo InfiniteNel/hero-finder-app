@@ -56,6 +56,8 @@ android {
 
 dependencies {
     val navVersion = "2.7.4"
+    val daggerHiltVersion = "2.48"
+    val retrofitVersion = "2.9.0"
 
     //NavComponent
     implementation("androidx.navigation:navigation-fragment-ktx:$navVersion")
@@ -65,12 +67,12 @@ dependencies {
     implementation("com.github.bumptech.glide:glide:4.16.0")
 
     //DaggerHilt
-    implementation("com.google.dagger:hilt-android:2.48")
-    kapt("com.google.dagger:hilt-compiler:2.48")
+    implementation("com.google.dagger:hilt-android:$daggerHiltVersion")
+    kapt("com.google.dagger:hilt-compiler:$daggerHiltVersion")
 
     //Retrofit
-    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
-    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation ("com.squareup.retrofit2:retrofit:$retrofitVersion")
+    implementation ("com.squareup.retrofit2:converter-gson:$retrofitVersion")
 
     //Swipe Refresh
     implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
