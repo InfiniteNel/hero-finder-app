@@ -13,6 +13,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
 import com.jroslar.heroapp.R
 import com.jroslar.heroapp.databinding.FragmentRandomHeroBinding
@@ -110,8 +111,12 @@ class RandomHeroFragment : Fragment() {
 
     private fun initListeners() {
         binding.cvAvatarRandom.setOnClickListener {
-            if (randomHeroViewModel.state.value == RandomHeroState.Hidden) {
-                spinCard()
+            when (randomHeroViewModel.state.value) {
+                is RandomHeroState.Hidden -> spinCard()
+                is RandomHeroState.Reveal -> findNavController().navigate(RandomHeroFragmentDirections.actionRandomHeroFragmentToDetailHeroFragment(randomHeroViewModel.data.value!!))
+                else -> {
+                    //
+                }
             }
         }
         binding.sfRandomHero.setOnRefreshListener { randomHeroViewModel.getNewRandomHero() }

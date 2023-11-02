@@ -23,7 +23,11 @@
         android:id="@+id/randomHeroFragment"
         android:name="com.jroslar.heroapp.ui.randomhero.RandomHeroFragment"
         android:label="fragment_random_hero"
-        tools:layout="@layout/fragment_random_hero" />
+        tools:layout="@layout/fragment_random_hero" >
+        <action
+            android:id="@+id/action_randomHeroFragment_to_detailHeroFragment"
+            app:destination="@id/detailHeroFragment" />
+    </fragment>
     <fragment
         android:id="@+id/detailHeroFragment"
         android:name="com.jroslar.heroapp.ui.detailhero.DetailHeroFragment"
