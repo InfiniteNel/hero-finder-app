@@ -19,13 +19,13 @@ Pantalla de búsqueda de héroe. Al usar la barra de búsqueda envía una petici
 ![DetailHero](https://i.imgur.com/qCppDW5.png)
 ![DetailHero](https://i.imgur.com/5X6qzgX.png)
 
-Pantalla que muestra la información del Héroe seleccionado en la pantalla SearchHero. La información que muestra es una imagen del Héroe, su nombre, su Biografía, sus estadística, su apariencia y su trabajo.
+Pantalla que muestra la información del Héroe seleccionado en la pantalla SearchHero o RandomHero. La información que muestra es una imagen del Héroe, su nombre, su Biografía, sus estadística, su apariencia y su trabajo.
 
 ### RandomHero
 ![RandomHero](https://i.imgur.com/KXxbuTF.png)
 ![RandomHero](https://i.imgur.com/GsMs0K7.png)
 
-Pantalla que muestra una tarjeta que al hacer clic sobre la misma muestra un Héroe aleatorio de la API. Al hacer scroll hacia abajo hace una petición de un nuevo Héroe aleatorio a la API y muestra nuevamente la tarjeta vacía.
+Pantalla que muestra una tarjeta que al hacer clic sobre la misma muestra un Héroe aleatorio de la API. Al hacer scroll hacia abajo hace una petición de un nuevo Héroe aleatorio a la API y muestra nuevamente la tarjeta vacía. Al hacer clic sobre la tarjeta con el Héroe revelado muestra la pantalla DetailHero con la información del Héroe.
 
 ## Construido con 🛠️
 
