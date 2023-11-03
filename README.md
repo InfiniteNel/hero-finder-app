@@ -1,10 +1,26 @@
 # HeroFinder 📋
 
-Su Portal para descubrir a los verdaderos Héroes.
+HeroFinder - Su Portal para descubrir a los verdaderos Héroes.
 
 ## Descripción 📄
 
-HeroFinder la aplicacción definitiva para explorar el apasionante mundo de los héroes. Si quiere saber mas sobre su héroe favorito, esta aplicación te proporcionará la información que necesitas.
+HeroFinder es una aplicación Android que te permite buscar y explorar información sobre héroes de cómics y películas. Los usuarios pueden buscar héroes por nombre y ver detalles sobre sus estadísticas, biografía, y más. También pueden descubrir nuevos héroes que no conocían con la función "Héroe Aleatorio". 
+
+## Características 🚀
+
+* Búsqueda de héroes de todas las categorías por nombre.
+* Visualización de detalles del héroe, incluyendo sus estadísticas, biografía y más.
+* Descubre nuevos héroes con la función "Héroe Aleatorio".
+
+## Instalación 🔧
+
+1. Clona este repositorio en tu máquina local.
+```
+git clone https://github.com/InfiniteNel/hero-finder-app.git
+```
+2. Abre el proyecto en Android Studio.
+
+3. Construye y ejecuta la aplicación en tu dispositivo o emulador.
 
 ## Pantallas 📲
 
@@ -29,17 +45,22 @@ Pantalla que muestra una tarjeta que al hacer clic sobre la misma muestra un Hé
 
 ## Construido con 🛠️
 
-* [Kotlin](https://developer.android.com/kotlin/learn?hl=es-419) - Es un lenguaje de programación multiplataforma, estáticamente tipado, de alto nivel y propósito general con inferencia de tipos.
+* [Kotlin](https://developer.android.com/kotlin/learn?hl=es-419) - Lenguaje de programación principal.
+
+### Tecnologías Utilizadas
+
+* [RecyclerView](https://developer.android.com/guide/topics/ui/layout/recyclerview?hl=es-419) - Mostrar la lista de resultados.
+* [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel?hl=es-419) y [StateFlow](https://developer.android.com/kotlin/flow/stateflow-and-sharedflow?hl=es-419) - Arquitectura de la aplicación.
 
 ### Dependencias
 
-* [NavComponent](https://developer.android.com/guide/navigation/get-started?hl=es-419) - Navegación entre pantallas.
+* [NavComponent](https://developer.android.com/guide/navigation/get-started?hl=es-419) y [SafeArgs](https://developer.android.com/guide/navigation/use-graph/safe-args?hl=es-419) - Navegación entre pantallas.
 * [Glide](https://github.com/bumptech/glide) - Carga y almacenamiento en caché de imágenes.
 * [DaggerHilt](https://developer.android.com/training/dependency-injection/hilt-android?hl=es-419) - Inyección de dependencias.
-* [Retrofit](https://square.github.io/retrofit/) - Peticiones webs.
+* [Retrofit](https://square.github.io/retrofit/) - Comunicación con la API.
 * [SwipeRefreshLayout](https://developer.android.com/jetpack/androidx/releases/swiperefreshlayout?hl=es-419) - Mecanismo estándar para actualizar el contenido de una vista.
 
-## Creditos ✍️
+## Agradecimientos ✍️
 
 <a href="https://www.flaticon.es/iconos-gratis/buscar" title="buscar iconos">Buscar iconos creados por Freepik - Flaticon</a>
 
@@ -52,3 +73,7 @@ Pantalla que muestra una tarjeta que al hacer clic sobre la misma muestra un Hé
 <a href="https://www.flaticon.es/iconos-gratis/no-hay-resultados" title="no hay resultados iconos">No hay resultados iconos creados por kmg design - Flaticon</a> 
 
 <a href="https://www.flaticon.es/iconos-gratis/signo-de-interrogacion" title="signo de interrogación iconos">Signo de interrogación iconos creados por apien - Flaticon</a>
+
+Agradecemos a la siguiente fuente de datos y API por proporcionar información sobre héroes utilizada en esta aplicación:
+
+* [API de Superhero](https://superheroapi.com/)
