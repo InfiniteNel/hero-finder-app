@@ -1,6 +1,7 @@
 package com.jroslar.heroapp.data.network.response
 
 import com.google.gson.annotations.SerializedName
+import com.jroslar.heroapp.core.extensions.notNullResult
 import com.jroslar.heroapp.domain.model.AppearanceModel
 import com.jroslar.heroapp.domain.model.BiographyModel
 import com.jroslar.heroapp.domain.model.HeroModel
@@ -95,12 +96,16 @@ data class Image (
 
 fun HeroResponse.toModelHero(): HeroModel = HeroModel(id, name, powerstats.toModelPowerstats(), biography.toModelBiography(), appearance.toModelAppearance(), work.toModelWork(), image.toModelImage())
 
-fun Powerstats.toModelPowerstats(): PowerstatsModel = PowerstatsModel(intelligence, strength, speed, durability, power, combat)
+fun Powerstats.toModelPowerstats(): PowerstatsModel =
+    PowerstatsModel(intelligence.notNullResult(), strength.notNullResult(), speed.notNullResult(), durability.notNullResult(), power.notNullResult(), combat.notNullResult())
 
-fun Biography.toModelBiography(): BiographyModel = BiographyModel(full_name, alter_egos, aliases, place_of_birth, first_appearance, publisher, alignment)
+fun Biography.toModelBiography(): BiographyModel =
+    BiographyModel(full_name.notNullResult(), alter_egos.notNullResult(), aliases, place_of_birth.notNullResult(), first_appearance.notNullResult(), publisher.notNullResult(), alignment.notNullResult())
 
-fun Appearance.toModelAppearance(): AppearanceModel = AppearanceModel(gender, race, height, weight, eye_color, hair_color)
+fun Appearance.toModelAppearance(): AppearanceModel =
+    AppearanceModel(gender.notNullResult(), race.notNullResult(), height, weight, eye_color.notNullResult(), hair_color.notNullResult())
 
-fun Work.toModelWork(): WorkModel = WorkModel(occupation, base)
+fun Work.toModelWork(): WorkModel =
+    WorkModel(occupation.notNullResult(), base.notNullResult())
 
 fun Image.toModelImage(): ImageModel = ImageModel(url)
