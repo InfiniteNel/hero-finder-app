@@ -2,16 +2,23 @@ package com.jroslar.heroapp.ui.detailhero
 
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.MenuProvider
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Lifecycle
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
+import com.jroslar.heroapp.R
 import com.jroslar.heroapp.databinding.FragmentDetailHeroBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class DetailHeroFragment : Fragment() {
+class DetailHeroFragment : Fragment(), MenuProvider {
 
     private var _binding:FragmentDetailHeroBinding? = null
     private val binding get() = _binding!!
@@ -33,8 +40,27 @@ class DetailHeroFragment : Fragment() {
         initUI()
     }
 
+    override fun onCreateMenu(menu: Menu, menuInflater: MenuInflater) {
+        menuInflater.inflate(R.menu.close_menu, menu)
+    }
+
+    override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
+        return when (menuItem.itemId) {
+            R.id.close -> {
+                findNavController().navigateUp()
+                true
+            }
+            else -> true
+        }
+    }
+
     private fun initUI() {
         initData()
+        initMenu()
+    }
+
+    private fun initMenu() {
+        requireActivity().addMenuProvider(this, viewLifecycleOwner, Lifecycle.State.RESUMED)
     }
 
     //Inicializa los datos del modelo de datos en la vista
