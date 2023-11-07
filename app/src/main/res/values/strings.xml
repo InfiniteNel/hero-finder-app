@@ -37,4 +37,10 @@
     <!-- RandomHeroFragment -->
     <string name="tvIdRandomText">ID: \t</string>
     <string name="tvRandomHeroText">\? ? ? ?</string>
+
+    <!-- LoginActivity -->
+    <string name="tietLoginEmailText">Email</string>
+    <string name="tietLoginPasswordText">Contraseña</string>
+    <string name="btLoginText">Entrar</string>
+    <string name="btToSignupText">Registrarse</string>
 </resources>

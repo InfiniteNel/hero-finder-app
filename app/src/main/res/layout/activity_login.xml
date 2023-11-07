@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary"
+    tools:context=".ui.favhero.FavHeroFragment">
+
+    <include
+        android:id="@+id/ivBannerHero"
+        layout="@layout/view_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/dlMarginLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/dlMarginRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="20dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilLoginEmail"
+        style="@style/FormTextInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/dlMarginRight"
+        app:layout_constraintStart_toStartOf="@+id/dlMarginLeft"
+        app:layout_constraintTop_toBottomOf="@+id/ivBannerHero">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tietLoginEmail"
+            style="@style/FormEditText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/tietLoginEmailText"
+            android:inputType="textEmailSubject"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilLoginPassword"
+        style="@style/FormTextInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/dlMarginRight"
+        app:layout_constraintStart_toStartOf="@+id/dlMarginLeft"
+        app:layout_constraintTop_toBottomOf="@+id/tilLoginEmail">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tietLoginPassword"
+            style="@style/FormEditText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/tietLoginPasswordText"
+            android:inputType="textPassword"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btLogin"
+        style="@style/ButtonPrimary"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:text="@string/btLoginText"
+        app:layout_constraintBottom_toTopOf="@+id/btToSignup"
+        app:layout_constraintEnd_toStartOf="@+id/dlMarginRight"
+        app:layout_constraintStart_toStartOf="@+id/dlMarginLeft" />
+
+    <Button
+        android:id="@+id/btToSignup"
+        style="@style/ButtonSecondary"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:text="@string/btToSignupText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/dlMarginRight"
+        app:layout_constraintStart_toStartOf="@+id/dlMarginLeft" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
