@@ -2,6 +2,7 @@ package com.jroslar.heroapp.data.network
 
 import com.jroslar.heroapp.BuildConfig.BASE_URL
 import com.jroslar.heroapp.data.HeroRepositoryImpl
+import com.jroslar.heroapp.data.network.heroapi.HeroApiService
 import com.jroslar.heroapp.domain.HeroRepository
 import dagger.Module
 import dagger.Provides

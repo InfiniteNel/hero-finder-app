@@ -1,4 +1,4 @@
-package com.jroslar.heroapp.data.network.response
+package com.jroslar.heroapp.data.network.heroapi.response
 
 import com.google.gson.annotations.SerializedName
 import com.jroslar.heroapp.core.extensions.notNullResult

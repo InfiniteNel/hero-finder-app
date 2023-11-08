@@ -1,8 +1,8 @@
 package com.jroslar.heroapp.data
 
 import android.util.Log
-import com.jroslar.heroapp.data.network.HeroApiService
-import com.jroslar.heroapp.data.network.response.toModelHero
+import com.jroslar.heroapp.data.network.heroapi.HeroApiService
+import com.jroslar.heroapp.data.network.heroapi.response.toModelHero
 import com.jroslar.heroapp.domain.HeroRepository
 import com.jroslar.heroapp.domain.model.HeroModel
 import javax.inject.Inject

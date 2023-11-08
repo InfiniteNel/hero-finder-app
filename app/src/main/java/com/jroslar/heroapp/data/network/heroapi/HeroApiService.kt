@@ -1,7 +1,7 @@
-package com.jroslar.heroapp.data.network
+package com.jroslar.heroapp.data.network.heroapi
 
-import com.jroslar.heroapp.data.network.response.HeroResponse
-import com.jroslar.heroapp.data.network.response.ListHeroResponse
+import com.jroslar.heroapp.data.network.heroapi.response.HeroResponse
+import com.jroslar.heroapp.data.network.heroapi.response.ListHeroResponse
 import retrofit2.http.GET
 import retrofit2.http.Path
 
