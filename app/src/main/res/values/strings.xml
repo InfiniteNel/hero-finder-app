@@ -45,4 +45,10 @@
     <string name="btToSignupText">Registrarse</string>
     <string name="loginErrorEmail">El email no es válido</string>
     <string name="loginErrorPassword">La contraseña debe contener al menos 6 caracteres</string>
+
+    <!-- ErrorDialog -->
+    <string name="loginErrorDialogTitle">No hemos encontrado el usuario</string>
+    <string name="loginErrorDialogBody">Verifique los datos o vuelva a intentarlo</string>
+    <string name="loginErrorDialogNegativeAction">Cancelar</string>
+    <string name="loginErrorDialogPositiveAction">Reintentar</string>
 </resources>

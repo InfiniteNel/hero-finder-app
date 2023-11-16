@@ -9,6 +9,7 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import com.jroslar.heroapp.R
+import com.jroslar.heroapp.core.dialog.ErrorDialog
 import com.jroslar.heroapp.core.extensions.loseFocusAfterAction
 import com.jroslar.heroapp.core.extensions.onTextChanged
 import com.jroslar.heroapp.databinding.ActivityLoginBinding
@@ -55,6 +56,8 @@ class LoginActivity : AppCompatActivity() {
             tilLoginPassword.error =
                 if (state.isValidPassword) null else getString(R.string.loginErrorPassword)
         }
+
+        if (state.isError) showErrorDialog()
     }
 
     private fun initListener() {
@@ -83,5 +86,22 @@ class LoginActivity : AppCompatActivity() {
             email = binding.tietLoginEmail.text.toString(),
             password = binding.tietLoginPassword.text.toString()
         )
+    }
+
+    private fun showErrorDialog() {
+        ErrorDialog.create(
+            title = getString(R.string.loginErrorDialogTitle),
+            description = getString(R.string.loginErrorDialogBody),
+            negativeAction = ErrorDialog.Action(getString(R.string.loginErrorDialogNegativeAction)) {
+                it.dismiss()
+            },
+            positiveAction = ErrorDialog.Action(getString(R.string.loginErrorDialogPositiveAction)) {
+                loginViewModel.onLoginClick(
+                    binding.tietLoginEmail.text.toString(),
+                    binding.tietLoginPassword.text.toString()
+                )
+                it.dismiss()
+            }
+        ).show(supportFragmentManager, null)
     }
 }
