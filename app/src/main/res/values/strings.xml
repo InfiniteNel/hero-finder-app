@@ -43,4 +43,6 @@
     <string name="tietLoginPasswordText">Contraseña</string>
     <string name="btLoginText">Entrar</string>
     <string name="btToSignupText">Registrarse</string>
+    <string name="loginErrorEmail">El email no es válido</string>
+    <string name="loginErrorPassword">La contraseña debe contener al menos 6 caracteres</string>
 </resources>
