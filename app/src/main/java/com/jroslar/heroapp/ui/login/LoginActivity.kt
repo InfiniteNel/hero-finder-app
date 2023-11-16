@@ -14,6 +14,7 @@ import com.jroslar.heroapp.core.dialog.ErrorDialog
 import com.jroslar.heroapp.core.extensions.loseFocusAfterAction
 import com.jroslar.heroapp.core.extensions.onTextChanged
 import com.jroslar.heroapp.databinding.ActivityLoginBinding
+import com.jroslar.heroapp.ui.MainActivity
 import com.jroslar.heroapp.ui.signup.SignupActivity
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
@@ -60,6 +61,7 @@ class LoginActivity : AppCompatActivity() {
         }
 
         if (state.isError) showErrorDialog()
+        if (state.isSuccess) navigateToMain()
     }
 
     private fun initListener() {
@@ -107,5 +109,9 @@ class LoginActivity : AppCompatActivity() {
 
     private fun navigateToSignup() {
         startActivity(Intent(this, SignupActivity::class.java))
+    }
+
+    private fun navigateToMain() {
+        startActivity(Intent(this, MainActivity::class.java))
     }
 }
