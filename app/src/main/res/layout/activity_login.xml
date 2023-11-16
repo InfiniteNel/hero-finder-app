@@ -27,6 +27,16 @@
         android:orientation="vertical"
         app:layout_constraintGuide_end="20dp" />
 
+    <ProgressBar
+        android:id="@+id/pbLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/btLogin"
+        app:layout_constraintEnd_toStartOf="@+id/dlMarginRight"
+        app:layout_constraintStart_toStartOf="@+id/dlMarginLeft"
+        app:layout_constraintTop_toBottomOf="@+id/tilLoginPassword" />
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilLoginEmail"
         style="@style/FormTextInputLayout"
