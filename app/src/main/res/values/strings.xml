@@ -51,4 +51,7 @@
     <string name="loginErrorDialogBody">Verifique los datos o vuelva a intentarlo</string>
     <string name="loginErrorDialogNegativeAction">Cancelar</string>
     <string name="loginErrorDialogPositiveAction">Reintentar</string>
+
+    <!-- SignupActivity -->
+    <string name="titleActivitySignup">SignupActivity</string>
 </resources>
