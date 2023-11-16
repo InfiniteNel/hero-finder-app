@@ -1,5 +1,6 @@
 package com.jroslar.heroapp.ui.login
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.inputmethod.EditorInfo
 import androidx.activity.viewModels
@@ -13,6 +14,7 @@ import com.jroslar.heroapp.core.dialog.ErrorDialog
 import com.jroslar.heroapp.core.extensions.loseFocusAfterAction
 import com.jroslar.heroapp.core.extensions.onTextChanged
 import com.jroslar.heroapp.databinding.ActivityLoginBinding
+import com.jroslar.heroapp.ui.signup.SignupActivity
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
@@ -76,9 +78,7 @@ class LoginActivity : AppCompatActivity() {
             }
         }
 
-        binding.btToSignup.setOnClickListener {
-            //
-        }
+        binding.btToSignup.setOnClickListener { if (!loginViewModel.state.value.isLoading) navigateToSignup() }
     }
 
     private fun onChangeField() {
@@ -103,5 +103,9 @@ class LoginActivity : AppCompatActivity() {
                 it.dismiss()
             }
         ).show(supportFragmentManager, null)
+    }
+
+    private fun navigateToSignup() {
+        startActivity(Intent(this, SignupActivity::class.java))
     }
 }
