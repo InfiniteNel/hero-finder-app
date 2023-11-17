@@ -39,12 +39,14 @@
     <string name="tvRandomHeroText">\? ? ? ?</string>
 
     <!-- LoginActivity -->
-    <string name="tietLoginEmailText">Email</string>
-    <string name="tietLoginPasswordText">Contraseña</string>
     <string name="btLoginText">Entrar</string>
     <string name="btToSignupText">Registrarse</string>
-    <string name="loginErrorEmail">El email no es válido</string>
-    <string name="loginErrorPassword">La contraseña debe contener al menos 6 caracteres</string>
+
+    <!-- LoginActivity && SignupActivity -->
+    <string name="tietEmailText">Email</string>
+    <string name="tietPasswordText">Contraseña</string>
+    <string name="ErrorEmail">El email no es válido</string>
+    <string name="ErrorPassword">La contraseña debe contener al menos 6 caracteres</string>
 
     <!-- ErrorDialog -->
     <string name="loginErrorDialogTitle">No hemos encontrado el usuario</string>

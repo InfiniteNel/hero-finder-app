@@ -51,7 +51,7 @@
             style="@style/FormEditText"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="@string/tietLoginEmailText"
+            android:hint="@string/tietEmailText"
             android:inputType="textEmailSubject"/>
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -71,7 +71,7 @@
             style="@style/FormEditText"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="@string/tietLoginPasswordText"
+            android:hint="@string/tietPasswordText"
             android:inputType="textPassword"/>
     </com.google.android.material.textfield.TextInputLayout>
 

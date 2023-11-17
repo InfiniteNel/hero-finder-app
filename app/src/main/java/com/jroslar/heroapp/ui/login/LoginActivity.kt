@@ -55,9 +55,9 @@ class LoginActivity : AppCompatActivity() {
         with(binding) {
             pbLoading.isVisible = state.isLoading
             tilLoginEmail.error =
-                if (state.isValidEmail) null else getString(R.string.loginErrorEmail)
+                if (state.isValidEmail) null else getString(R.string.ErrorEmail)
             tilLoginPassword.error =
-                if (state.isValidPassword) null else getString(R.string.loginErrorPassword)
+                if (state.isValidPassword) null else getString(R.string.ErrorPassword)
         }
 
         if (state.isError) showErrorDialog()
