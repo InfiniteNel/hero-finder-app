@@ -56,4 +56,7 @@
 
     <!-- SignupActivity -->
     <string name="titleActivitySignup">SignupActivity</string>
+    <string name="tietUsernameText">Nombre de usuario</string>
+    <string name="btSignupText">Crear Cuenta</string>
+    <string name="tvToLoginText"><u>¿Ya tienes cuenta? Inicia sesión</u></string>
 </resources>
