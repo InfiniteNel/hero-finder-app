@@ -60,4 +60,6 @@
     <string name="tietRepeatPasswordText">Confirmar contraseña</string>
     <string name="btSignupText">Crear Cuenta</string>
     <string name="tvToLoginText"><u>¿Ya tienes cuenta? Inicia sesión</u></string>
+    <string name="ErrorUsername">El usuario debe contener al menos 6 caracteres</string>
+    <string name="ErrorRepeatPassword">La contraseña no coincide</string>
 </resources>
