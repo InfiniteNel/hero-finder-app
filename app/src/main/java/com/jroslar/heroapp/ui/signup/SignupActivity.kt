@@ -66,6 +66,12 @@ class SignupActivity : AppCompatActivity() {
 
         binding.tietSignupRepeatPassword.loseFocusAfterAction(EditorInfo.IME_ACTION_DONE)
         binding.tietSignupRepeatPassword.onTextChanged { onChangeField() }
+
+        binding.tvToLogin.setOnClickListener { if (!signupViewModel.state.value.isLoading) navigateToLogin() }
+    }
+
+    private fun navigateToLogin() {
+        finish()
     }
 
     private fun onChangeField() {
