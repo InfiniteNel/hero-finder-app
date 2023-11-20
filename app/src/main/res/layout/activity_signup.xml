@@ -98,7 +98,7 @@
             style="@style/FormEditText"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="@string/tietPasswordText"
+            android:hint="@string/tietRepeatPasswordText"
             android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
