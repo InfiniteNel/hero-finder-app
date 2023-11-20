@@ -1,5 +1,6 @@
 package com.jroslar.heroapp.ui.signup
 
+import android.util.Log
 import android.util.Patterns
 import androidx.lifecycle.ViewModel
 import com.jroslar.heroapp.core.Constant.MIN_PASSWORD_LENGTH
@@ -15,6 +16,14 @@ class SignupViewModel @Inject constructor(): ViewModel() {
 
     private var _state = MutableStateFlow(SignupState())
     val state: StateFlow<SignupState> = _state
+
+    fun onClickSignup(userSignupData: UserSignupData) {
+        onChangeText(userSignupData)
+
+        if (state.value.userValidated()) {
+            Log.d("HeroFinder", "Create Account.")
+        }
+    }
 
     fun onChangeText(userSignupData: UserSignupData) {
         _state.value = SignupState(

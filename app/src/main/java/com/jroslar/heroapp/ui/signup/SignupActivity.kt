@@ -68,6 +68,8 @@ class SignupActivity : AppCompatActivity() {
         binding.tietSignupRepeatPassword.onTextChanged { onChangeField() }
 
         binding.tvToLogin.setOnClickListener { if (!signupViewModel.state.value.isLoading) navigateToLogin() }
+
+        binding.btSignup.setOnClickListener { if (!signupViewModel.state.value.isLoading) signupViewModel.onClickSignup(getData()) }
     }
 
     private fun navigateToLogin() {
@@ -75,13 +77,15 @@ class SignupActivity : AppCompatActivity() {
     }
 
     private fun onChangeField() {
-        signupViewModel.onChangeText(
-            UserSignupData(
-                binding.tietSignupEmail.text.toString(),
-                binding.tietSignupUsername.text.toString(),
-                binding.tietSignupPassword.text.toString(),
-                binding.tietSignupRepeatPassword.text.toString()
-            )
+        signupViewModel.onChangeText(getData())
+    }
+
+    private fun getData(): UserSignupData {
+        return UserSignupData(
+            binding.tietSignupEmail.text.toString(),
+            binding.tietSignupUsername.text.toString(),
+            binding.tietSignupPassword.text.toString(),
+            binding.tietSignupRepeatPassword.text.toString()
         )
     }
 }
