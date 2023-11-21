@@ -1,18 +1,25 @@
 package com.jroslar.heroapp.ui.signup
 
-import android.util.Log
 import android.util.Patterns
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import com.jroslar.heroapp.core.Constant.MIN_PASSWORD_LENGTH
 import com.jroslar.heroapp.core.Constant.MIN_USERNAME_LENGTH
+import com.jroslar.heroapp.data.network.firebase.response.CreateAccountResult
+import com.jroslar.heroapp.domain.usecase.CreateAccountUseCase
 import com.jroslar.heroapp.ui.signup.model.UserSignupData
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
 @HiltViewModel
-class SignupViewModel @Inject constructor(): ViewModel() {
+class SignupViewModel @Inject constructor(
+    private val createAccountUseCase: CreateAccountUseCase
+): ViewModel() {
 
     private var _state = MutableStateFlow(SignupState())
     val state: StateFlow<SignupState> = _state
@@ -21,7 +28,7 @@ class SignupViewModel @Inject constructor(): ViewModel() {
         onChangeText(userSignupData)
 
         if (state.value.userValidated()) {
-            Log.d("HeroFinder", "Create Account.")
+            createAccount(userSignupData)
         }
     }
 
@@ -32,6 +39,18 @@ class SignupViewModel @Inject constructor(): ViewModel() {
             isValidPassword = isValidPassword(userSignupData.password),
             isValidRepeatPassword = isValidRepeatPassword(userSignupData.password, userSignupData.repeatPassword)
         )
+    }
+
+    private fun createAccount(userSignupData: UserSignupData) {
+        viewModelScope.launch {
+            _state.value = SignupState(isLoading = true)
+            when (withContext(Dispatchers.IO) { createAccountUseCase(userSignupData) }) {
+                CreateAccountResult.ErrorDuplicateUser -> _state.value = SignupState(isError = true)
+                CreateAccountResult.Error -> _state.value = SignupState(isError = true)
+                CreateAccountResult.Success -> _state.value = SignupState(isSuccess = true)
+            }
+            _state.value = SignupState(isLoading = false, isError = false, isSuccess = false)
+        }
     }
 
     private fun isValidEmail(email: String) =

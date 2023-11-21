@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.inputmethod.EditorInfo
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isVisible
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
@@ -47,6 +48,8 @@ class SignupActivity : AppCompatActivity() {
 
     private fun updateUI(state: SignupState) {
         with(binding) {
+            pbLoading.isVisible = state.isLoading
+
             tilSignupEmail.error = if (state.isValidEmail) null else getString(R.string.ErrorEmail)
             tilSignupUsername.error = if (state.isValidUsername) null else getString(R.string.ErrorUsername)
             tilSignupPassword.error = if (state.isValidPassword) null else getString(R.string.ErrorPassword)
