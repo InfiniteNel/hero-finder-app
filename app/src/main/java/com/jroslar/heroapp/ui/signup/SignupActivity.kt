@@ -10,6 +10,7 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import com.jroslar.heroapp.R
+import com.jroslar.heroapp.core.dialog.ErrorDialog
 import com.jroslar.heroapp.core.extensions.loseFocusAfterAction
 import com.jroslar.heroapp.core.extensions.onTextChanged
 import com.jroslar.heroapp.databinding.ActivitySignupBinding
@@ -58,6 +59,8 @@ class SignupActivity : AppCompatActivity() {
             tilSignupRepeatPassword.error = if (state.isValidRepeatPassword) null else getString(R.string.ErrorRepeatPassword)
         }
 
+        if (state.isErrorDuplicateUser) showErrorDialog(R.string.signupErrorDialogDuplicateUserTitle, R.string.signupErrorDialogDuplicateUserBody)
+        if (state.isError) showErrorDialog(R.string.signupErrorDialogTitle, R.string.signupErrorDialogBody)
         if (state.isSuccess) navigateToMain()
     }
 
@@ -86,6 +89,16 @@ class SignupActivity : AppCompatActivity() {
 
     private fun navigateToLogin() {
         finish()
+    }
+
+    private fun showErrorDialog(title: Int, body: Int) {
+        ErrorDialog.create(
+            title = getString(title),
+            description = getString(body),
+            positiveAction = ErrorDialog.Action(getString(R.string.signupErrorDialogPositiveAction)) {
+                it.dismiss()
+            }
+        ).show(supportFragmentManager, null)
     }
 
     private fun onChangeField() {

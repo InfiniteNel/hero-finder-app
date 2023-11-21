@@ -62,4 +62,9 @@
     <string name="tvToLoginText"><u>¿Ya tienes cuenta? Inicia sesión</u></string>
     <string name="ErrorUsername">El usuario debe contener al menos 6 caracteres</string>
     <string name="ErrorRepeatPassword">La contraseña no coincide</string>
+    <string name="signupErrorDialogTitle">Ha ocurrido un error</string>
+    <string name="signupErrorDialogBody">No hemos podido crear tu cuenta, inténtalo de nuevo más tarde</string>
+    <string name="signupErrorDialogPositiveAction">Aceptar</string>
+    <string name="signupErrorDialogDuplicateUserTitle">El usuario ya existe</string>
+    <string name="signupErrorDialogDuplicateUserBody">El email ya esta registrado con otro usuario </string>
 </resources>

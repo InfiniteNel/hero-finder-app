@@ -45,11 +45,11 @@ class SignupViewModel @Inject constructor(
         viewModelScope.launch {
             _state.value = SignupState(isLoading = true)
             when (withContext(Dispatchers.IO) { createAccountUseCase(userSignupData) }) {
-                CreateAccountResult.ErrorDuplicateUser -> _state.value = SignupState(isError = true)
+                CreateAccountResult.ErrorDuplicateUser -> _state.value = SignupState(isErrorDuplicateUser = true)
                 CreateAccountResult.Error -> _state.value = SignupState(isError = true)
                 CreateAccountResult.Success -> _state.value = SignupState(isSuccess = true)
             }
-            _state.value = SignupState(isLoading = false, isError = false, isSuccess = false)
+            _state.value = SignupState(isLoading = false, isError = false, isErrorDuplicateUser = false, isSuccess = false)
         }
     }
 
