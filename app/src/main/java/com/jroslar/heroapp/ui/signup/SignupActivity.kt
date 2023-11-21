@@ -1,5 +1,6 @@
 package com.jroslar.heroapp.ui.signup
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.inputmethod.EditorInfo
 import androidx.activity.viewModels
@@ -12,6 +13,7 @@ import com.jroslar.heroapp.R
 import com.jroslar.heroapp.core.extensions.loseFocusAfterAction
 import com.jroslar.heroapp.core.extensions.onTextChanged
 import com.jroslar.heroapp.databinding.ActivitySignupBinding
+import com.jroslar.heroapp.ui.MainActivity
 import com.jroslar.heroapp.ui.signup.model.UserSignupData
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
@@ -55,6 +57,13 @@ class SignupActivity : AppCompatActivity() {
             tilSignupPassword.error = if (state.isValidPassword) null else getString(R.string.ErrorPassword)
             tilSignupRepeatPassword.error = if (state.isValidRepeatPassword) null else getString(R.string.ErrorRepeatPassword)
         }
+
+        if (state.isSuccess) navigateToMain()
+    }
+
+    private fun navigateToMain() {
+        startActivity(Intent(this, MainActivity::class.java))
+        finish()
     }
 
     private fun initListener() {
