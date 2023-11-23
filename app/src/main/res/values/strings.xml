@@ -72,4 +72,6 @@
     <!-- ForgotPasswordActivity -->
     <string name="btForgotpasswordText">Enviar email</string>
     <string name="tvForgotPasswordToLoginText"><u>¿Recuerdas la contraseña? Inicia sesión</u></string>
+    <string name="tvInfoForgotpasswordBodyText">Ingrese su dirección de correo electrónico y le enviaremos un correo electrónico para restablecer su contraseña</string>
+    <string name="tvInfoForgotpasswordTitleText">¿Ha olvidado su contrseña?</string>
 </resources>
