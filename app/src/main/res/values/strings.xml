@@ -41,6 +41,7 @@
     <!-- LoginActivity -->
     <string name="btLoginText">Entrar</string>
     <string name="btToSignupText">Registrarse</string>
+    <string name="tvLoginToForgotPasswordText"><u>He olvidado mi contraseña</u></string>
 
     <!-- LoginActivity && SignupActivity -->
     <string name="tietEmailText">Email</string>

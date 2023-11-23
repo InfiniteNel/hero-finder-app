@@ -15,6 +15,7 @@ import com.jroslar.heroapp.core.extensions.loseFocusAfterAction
 import com.jroslar.heroapp.core.extensions.onTextChanged
 import com.jroslar.heroapp.databinding.ActivityLoginBinding
 import com.jroslar.heroapp.ui.MainActivity
+import com.jroslar.heroapp.ui.forgotpassword.ForgotPasswordActivity
 import com.jroslar.heroapp.ui.signup.SignupActivity
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
@@ -81,6 +82,7 @@ class LoginActivity : AppCompatActivity() {
         }
 
         binding.btToSignup.setOnClickListener { if (!loginViewModel.state.value.isLoading) navigateToSignup() }
+        binding.tvLoginToForgotPassword.setOnClickListener { if (!loginViewModel.state.value.isLoading) navigateToForgotpassword() }
     }
 
     private fun onChangeField() {
@@ -113,5 +115,9 @@ class LoginActivity : AppCompatActivity() {
 
     private fun navigateToMain() {
         startActivity(Intent(this, MainActivity::class.java))
+    }
+
+    private fun navigateToForgotpassword() {
+        startActivity(Intent(this, ForgotPasswordActivity::class.java))
     }
 }
