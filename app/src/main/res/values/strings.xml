@@ -67,4 +67,8 @@
     <string name="signupErrorDialogPositiveAction">Aceptar</string>
     <string name="signupErrorDialogDuplicateUserTitle">El usuario ya existe</string>
     <string name="signupErrorDialogDuplicateUserBody">El email ya esta registrado con otro usuario </string>
+
+    <!-- ForgotPasswordActivity -->
+    <string name="btForgotpasswordText">Enviar email</string>
+    <string name="tvForgotPasswordToLoginText"><u>¿Recuerdas la contraseña? Inicia sesión</u></string>
 </resources>
