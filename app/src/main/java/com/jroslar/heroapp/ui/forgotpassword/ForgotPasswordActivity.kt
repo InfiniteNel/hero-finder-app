@@ -9,6 +9,7 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import com.jroslar.heroapp.R
+import com.jroslar.heroapp.core.dialog.ErrorDialog
 import com.jroslar.heroapp.core.extensions.loseFocusAfterAction
 import com.jroslar.heroapp.core.extensions.onTextChanged
 import com.jroslar.heroapp.databinding.ActivityForgotPasswordBinding
@@ -72,5 +73,17 @@ class ForgotPasswordActivity : AppCompatActivity() {
             tilForgotpasswordEmail.error =
                 if (state.isValidEmail) null else getString(R.string.ErrorEmail)
         }
+
+        if (state.isError) showErrorDialog()
+    }
+
+    private fun showErrorDialog() {
+        ErrorDialog.create(
+            title = getString(R.string.forgotpasswordErrorDialogTitle),
+            description = getString(R.string.forgotpasswordErrorDialogBody),
+            positiveAction = ErrorDialog.Action(getString(R.string.forgotpasswordErrorDialogPositiveAction)) {
+                it.dismiss()
+            }
+        ).show(supportFragmentManager, null)
     }
 }

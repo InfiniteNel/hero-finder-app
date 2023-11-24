@@ -74,4 +74,7 @@
     <string name="tvForgotPasswordToLoginText"><u>¿Recuerdas la contraseña? Inicia sesión</u></string>
     <string name="tvInfoForgotpasswordBodyText">Ingrese su dirección de correo electrónico y le enviaremos un correo electrónico para restablecer su contraseña</string>
     <string name="tvInfoForgotpasswordTitleText">¿Ha olvidado su contrseña?</string>
+    <string name="forgotpasswordErrorDialogTitle">Correo electrónico no encontrado</string>
+    <string name="forgotpasswordErrorDialogBody">No hemos podido encontrar la dirección de correo electrónico</string>
+    <string name="forgotpasswordErrorDialogPositiveAction">Aceptar</string>
 </resources>
