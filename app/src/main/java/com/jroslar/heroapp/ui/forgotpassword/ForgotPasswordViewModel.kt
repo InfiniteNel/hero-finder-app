@@ -1,6 +1,5 @@
 package com.jroslar.heroapp.ui.forgotpassword
 
-import android.util.Log
 import android.util.Patterns
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -41,10 +40,8 @@ class ForgotPasswordViewModel @Inject constructor(
 
             if (withContext(Dispatchers.IO) { sendEmailResetPasswordUseCase(email) }) {
                 _state.value = ForgotPasswordState(isSuccess = true)
-                Log.d("HeroFinder", "SUCCESS")
             } else {
                 _state.value = ForgotPasswordState(isError = true)
-                Log.d("HeroFinder", "ERROR")
             }
 
             _state.value = ForgotPasswordState(isLoading = false, isError = false, isSuccess = false)
