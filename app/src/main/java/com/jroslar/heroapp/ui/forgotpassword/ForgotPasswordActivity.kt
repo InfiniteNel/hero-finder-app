@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.inputmethod.EditorInfo
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isVisible
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
@@ -38,6 +39,14 @@ class ForgotPasswordActivity : AppCompatActivity() {
     private fun initListener() {
         binding.tietForgotpasswordEmail.loseFocusAfterAction(EditorInfo.IME_ACTION_DONE)
         binding.tietForgotpasswordEmail.onTextChanged { onChangeField() }
+
+        binding.btForgotpassword.setOnClickListener {
+            if (!forgotPasswordViewmodel.state.value.isLoading) {
+                forgotPasswordViewmodel.onClickForgotPassword(
+                    binding.tietForgotpasswordEmail.text.toString()
+                )
+            }
+        }
     }
 
     private fun onChangeField() {
@@ -58,6 +67,8 @@ class ForgotPasswordActivity : AppCompatActivity() {
 
     private fun updateUI(state: ForgotPasswordState) {
         with(binding) {
+            pbLoading.isVisible = state.isLoading
+
             tilForgotpasswordEmail.error =
                 if (state.isValidEmail) null else getString(R.string.ErrorEmail)
         }
