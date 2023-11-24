@@ -27,6 +27,15 @@ class AuthenticationService @Inject constructor(
         }
     }
 
+    suspend fun sendEmailResetPassword(email: String): Boolean {
+        return try {
+            firebase.sendPasswordResetEmail(email).await()
+            true
+        } catch (e: FirebaseAuthException) {
+            false
+        }
+    }
+
     private fun Result<AuthResult>.toLoginResult() = when (getOrNull()) {
         null -> LoginResult.Error
         else -> LoginResult.Success
