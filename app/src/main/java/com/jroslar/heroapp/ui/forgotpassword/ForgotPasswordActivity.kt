@@ -42,6 +42,8 @@ class ForgotPasswordActivity : AppCompatActivity() {
         binding.tietForgotpasswordEmail.loseFocusAfterAction(EditorInfo.IME_ACTION_DONE)
         binding.tietForgotpasswordEmail.onTextChanged { onChangeField() }
 
+        binding.tvForgotPasswordToLogin.setOnClickListener { navigateToLogin() }
+
         binding.btForgotpassword.setOnClickListener {
             if (!forgotPasswordViewmodel.state.value.isLoading) {
                 forgotPasswordViewmodel.onClickForgotPassword(
@@ -77,6 +79,10 @@ class ForgotPasswordActivity : AppCompatActivity() {
 
         if (state.isError) showErrorDialog()
         if (state.isSuccess) showSuccessDialog()
+    }
+
+    private fun navigateToLogin() {
+        finish()
     }
 
     private fun showSuccessDialog() {
