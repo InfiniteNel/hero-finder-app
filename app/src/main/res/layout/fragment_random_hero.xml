@@ -31,18 +31,14 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             android:text="@string/tvIdRandomText"
-            app:layout_constraintBottom_toTopOf="@+id/cvAvatarRandom"
+            app:layout_constraintBottom_toTopOf="@+id/clAvatarRandom"
             app:layout_constraintEnd_toEndOf="@id/dlMarginRight"
             app:layout_constraintStart_toStartOf="@id/dlMarginLeft" />
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cvAvatarRandom"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clAvatarRandom"
             android:layout_width="0dp"
             android:layout_height="400dp"
-            android:scaleType="center"
-            android:backgroundTint="@color/primaryDark"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@id/dlMarginRight"
             app:layout_constraintStart_toStartOf="@id/dlMarginLeft"
@@ -50,14 +46,30 @@
 
             <ImageView
                 android:id="@+id/ivAvatarRandom"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:adjustViewBounds="true"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="8dp"
+                android:src="@drawable/card_background"
+                android:background="#e4e9ef"
                 android:contentDescription="@string/app_name"
-                android:scaleType="fitXY"
-                android:src="@drawable/signo_interrogacion" />
-        </androidx.cardview.widget.CardView>
+                app:layout_constraintBottom_toBottomOf="@id/ivAvatarRandomBorder"
+                app:layout_constraintEnd_toEndOf="@id/ivAvatarRandomBorder"
+                app:layout_constraintStart_toStartOf="@id/ivAvatarRandomBorder"
+                app:layout_constraintTop_toTopOf="@id/ivAvatarRandomBorder" />
+
+            <ImageView
+                android:id="@+id/ivAvatarRandomBorder"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"
+                android:background="@drawable/card_background_border"
+                android:contentDescription="@string/app_name"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <TextView
             android:id="@+id/tvNameRandom"
@@ -69,7 +81,7 @@
             android:text="@string/tvRandomHeroText"
             app:layout_constraintEnd_toStartOf="@+id/dlMarginRight"
             app:layout_constraintStart_toStartOf="@+id/dlMarginLeft"
-            app:layout_constraintTop_toBottomOf="@+id/cvAvatarRandom"/>
+            app:layout_constraintTop_toBottomOf="@+id/clAvatarRandom"/>
 
         <TextView
             android:id="@+id/tvPublisherRandom"

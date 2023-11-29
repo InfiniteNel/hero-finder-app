@@ -78,7 +78,7 @@ class RandomHeroFragment : Fragment() {
         Glide
             .with(this)
             .load(state.hero.image.url)
-            .placeholder(R.drawable.signo_interrogacion)
+            .placeholder(R.drawable.card_background)
             .into(binding.ivAvatarRandom)
     }
 
@@ -98,7 +98,7 @@ class RandomHeroFragment : Fragment() {
         binding.tvNameRandom.isVisible = true
         binding.tvPublisherRandom.isVisible = true
 
-        binding.ivAvatarRandom.setImageResource(R.drawable.signo_interrogacion)
+        binding.ivAvatarRandom.setImageResource(R.drawable.card_background)
         binding.tvIdRandom.text = getString(R.string.tvIdRandomText).plus(getString(R.string.tvRandomHeroText))
         binding.tvNameRandom.text = getString(R.string.tvRandomHeroText)
         binding.tvPublisherRandom.text = getString(R.string.tvRandomHeroText)
@@ -110,7 +110,7 @@ class RandomHeroFragment : Fragment() {
     }
 
     private fun initListeners() {
-        binding.cvAvatarRandom.setOnClickListener {
+        binding.clAvatarRandom.setOnClickListener {
             when (randomHeroViewModel.state.value) {
                 is RandomHeroState.Hidden -> spinCard()
                 is RandomHeroState.Reveal -> findNavController().navigate(RandomHeroFragmentDirections.actionRandomHeroFragmentToDetailHeroFragment(randomHeroViewModel.data.value!!))
@@ -124,7 +124,7 @@ class RandomHeroFragment : Fragment() {
 
     //Animación girar en el eje Y del CardView
     private fun spinCard() {
-        val animator = ObjectAnimator.ofFloat(binding.cvAvatarRandom, View.ROTATION_Y, 0f, 1440f)
+        val animator = ObjectAnimator.ofFloat(binding.clAvatarRandom, View.ROTATION_Y, 0f, 1440f)
         animator.duration = 2000
         animator.interpolator = DecelerateInterpolator()
         animator.doOnStart { randomHeroViewModel.getRevealRandomHero() }
