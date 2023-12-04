@@ -72,8 +72,6 @@ Pantalla que muestra una tarjeta que al hacer clic sobre la misma muestra un Hé
 
 <a href="https://www.flaticon.es/iconos-gratis/no-hay-resultados" title="no hay resultados iconos">No hay resultados iconos creados por kmg design - Flaticon</a> 
 
-<a href="https://www.flaticon.es/iconos-gratis/signo-de-interrogacion" title="signo de interrogación iconos">Signo de interrogación iconos creados por apien - Flaticon</a>
-
 Agradecemos a la siguiente fuente de datos y API por proporcionar información sobre héroes utilizada en esta aplicación:
 
 * [API de Superhero](https://superheroapi.com/)
