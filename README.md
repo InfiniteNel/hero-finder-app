@@ -74,6 +74,7 @@ Pantalla para reestablecer la contraseña mediante el correo electrónico.
 * [DaggerHilt](https://developer.android.com/training/dependency-injection/hilt-android?hl=es-419) - Inyección de dependencias.
 * [Retrofit](https://square.github.io/retrofit/) - Comunicación con la API.
 * [SwipeRefreshLayout](https://developer.android.com/jetpack/androidx/releases/swiperefreshlayout?hl=es-419) - Mecanismo estándar para actualizar el contenido de una vista.
+* [Firebase](https://firebase.google.com/?hl=es) - Gestión de usuarios
 
 ## Agradecimientos ✍️
 
