@@ -48,6 +48,11 @@ Pantalla que muestra una tarjeta que al hacer clic sobre la misma muestra un Hé
 
 Pantalla para acceder a la aplicación.
 
+### Signup
+![Signup](https://i.imgur.com/ys3HS1q.png)
+
+Pantalla para registrarse en la aplicación.
+
 ## Construido con 🛠️
 
 * [Kotlin](https://developer.android.com/kotlin/learn?hl=es-419) - Lenguaje de programación principal.
