@@ -53,6 +53,11 @@ Pantalla para acceder a la aplicación.
 
 Pantalla para registrarse en la aplicación.
 
+### ForgotPassword
+![ForgotPassword](https://i.imgur.com/fpd3L4d.png)
+
+Pantalla para reestablecer la contraseña mediante el correo electrónico.
+
 ## Construido con 🛠️
 
 * [Kotlin](https://developer.android.com/kotlin/learn?hl=es-419) - Lenguaje de programación principal.
