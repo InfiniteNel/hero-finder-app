@@ -4,6 +4,8 @@ import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseAuthException
 import com.google.firebase.auth.FirebaseAuthUserCollisionException
+import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.auth.ktx.userProfileChangeRequest
 import com.jroslar.heroapp.data.network.firebase.response.CreateAccountResult
 import com.jroslar.heroapp.data.network.firebase.response.LoginResult
 import kotlinx.coroutines.tasks.await
@@ -16,9 +18,16 @@ class AuthenticationService @Inject constructor(
         firebase.signInWithEmailAndPassword(email, password).await()
     }.toLoginResult()
 
-    suspend fun createAccount(email: String, password: String): CreateAccountResult {
+    suspend fun createAccount(email: String, username: String, password: String): CreateAccountResult {
         return try {
             firebase.createUserWithEmailAndPassword(email, password).await()
+
+            val profileUpdates = userProfileChangeRequest {
+                displayName = username
+            }
+
+            getCurrentUser()?.updateProfile(profileUpdates)?.await()
+
             CreateAccountResult.Success
         } catch(e: FirebaseAuthUserCollisionException) {
             CreateAccountResult.ErrorDuplicateUser
@@ -34,6 +43,10 @@ class AuthenticationService @Inject constructor(
         } catch (e: FirebaseAuthException) {
             false
         }
+    }
+
+    fun getCurrentUser(): FirebaseUser? {
+        return firebase.currentUser
     }
 
     private fun Result<AuthResult>.toLoginResult() = when (getOrNull()) {

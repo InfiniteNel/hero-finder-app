@@ -8,5 +8,5 @@ import javax.inject.Inject
 class CreateAccountUseCase @Inject constructor(private val authenticationService: AuthenticationService) {
 
     suspend operator fun invoke(userSignupData: UserSignupData): CreateAccountResult =
-         authenticationService.createAccount(userSignupData.email, userSignupData.password)
+        authenticationService.createAccount(userSignupData.email, userSignupData.userName, userSignupData.password)
 }
