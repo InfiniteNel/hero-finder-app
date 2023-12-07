@@ -80,4 +80,8 @@
     <string name="forgotpasswordSuccessDialogTitle">Correo electrónico enviado</string>
     <string name="forgotpasswordSuccessDialogBody">Se ha enviando un email a su dirección de correo electrónico</string>
     <string name="forgotpasswordSuccessDialogPositiveAction">Aceptar</string>
+    
+    <!-- FavHeroFragment -->
+    <string name="tvFavHeroNoDataFound">\? ? ? ? ?</string>
+    <string name="btSignOffText">Cerrar Sesión</string>
 </resources>

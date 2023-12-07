@@ -82,6 +82,11 @@
         <item name="maxLines">1</item>
         <item name="android:textColorHint">@color/accent</item>
     </style>
+    
+    <style name="RoundedImageView">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
 
     <!-- DetailHeroFragment -->
     <style name="DivideDetailHero" parent="Title3">
