@@ -10,6 +10,7 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import com.jroslar.heroapp.R
+import com.jroslar.heroapp.core.dialog.ErrorDialog
 import com.jroslar.heroapp.databinding.FragmentFavHeroBinding
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
@@ -38,6 +39,11 @@ class FavHeroFragment : Fragment() {
 
     private fun initUI() {
         initUIState()
+        initListener()
+    }
+
+    private fun initListener() {
+        binding.btSignOff.setOnClickListener { favHeroViewModel.signOff() }
     }
 
     private fun initUIState() {
@@ -47,10 +53,16 @@ class FavHeroFragment : Fragment() {
                     when(it) {
                         FavHeroState.NoData -> noDataState()
                         is FavHeroState.Success -> successState(it)
+                        FavHeroState.Error -> showErrorDialog(R.string.favHeroErrorDialogTitle, R.string.favHeroErrorDialogBody)
+                        FavHeroState.SignOut -> signOutState()
                     }
                 }
             }
         }
+    }
+
+    private fun signOutState() {
+        activity?.finish()
     }
 
     private fun successState(favHeroState: FavHeroState.Success) {
@@ -61,5 +73,19 @@ class FavHeroFragment : Fragment() {
     private fun noDataState() {
         binding.tvUserEmail.text = getString(R.string.tvFavHeroNoDataFound)
         binding.tvUserName.text = getString(R.string.tvFavHeroNoDataFound)
+    }
+
+    private fun showErrorDialog(title: Int, body: Int) {
+        ErrorDialog.create(
+            title = getString(title),
+            description = getString(body),
+            positiveAction = ErrorDialog.Action(getString(R.string.favHeroErrorDialogPositiveAction)) {
+                favHeroViewModel.signOff()
+                it.dismiss()
+            },
+            negativeAction = ErrorDialog.Action(getString(R.string.favHeroErrorDialogNegativeAction)) {
+                it.dismiss()
+            }
+        ).show(parentFragmentManager, null)
     }
 }

@@ -84,4 +84,8 @@
     <!-- FavHeroFragment -->
     <string name="tvFavHeroNoDataFound">\? ? ? ? ?</string>
     <string name="btSignOffText">Cerrar Sesión</string>
+    <string name="favHeroErrorDialogTitle">Ha ocurrido un error</string>
+    <string name="favHeroErrorDialogBody">No hemos logrado cerrar sesión inténtelo más tarde</string>
+    <string name="favHeroErrorDialogPositiveAction">Reintentar</string>
+    <string name="favHeroErrorDialogNegativeAction">Cancelar</string>
 </resources>
