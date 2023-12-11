@@ -1,8 +1,8 @@
 package com.jroslar.heroapp.data.network.firebase
 
+import com.google.firebase.FirebaseException
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseAuthException
 import com.google.firebase.auth.FirebaseAuthUserCollisionException
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.userProfileChangeRequest
@@ -31,7 +31,7 @@ class AuthenticationService @Inject constructor(
             CreateAccountResult.Success
         } catch(e: FirebaseAuthUserCollisionException) {
             CreateAccountResult.ErrorDuplicateUser
-        } catch (e: FirebaseAuthException) {
+        } catch (e: FirebaseException) {
             CreateAccountResult.Error
         }
     }
@@ -40,7 +40,7 @@ class AuthenticationService @Inject constructor(
         return try {
             firebase.signOut()
             true
-        } catch (e: FirebaseAuthException) {
+        } catch (e: FirebaseException) {
             false
         }
     }
@@ -49,7 +49,7 @@ class AuthenticationService @Inject constructor(
         return try {
             firebase.sendPasswordResetEmail(email).await()
             true
-        } catch (e: FirebaseAuthException) {
+        } catch (e: FirebaseException) {
             false
         }
     }
