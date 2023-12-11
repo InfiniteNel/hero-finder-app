@@ -1,6 +1,7 @@
 package com.jroslar.heroapp.data.network.firebase
 
 import com.google.firebase.FirebaseException
+import com.google.firebase.FirebaseNetworkException
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseAuthUserCollisionException
@@ -31,6 +32,8 @@ class AuthenticationService @Inject constructor(
             CreateAccountResult.Success
         } catch(e: FirebaseAuthUserCollisionException) {
             CreateAccountResult.ErrorDuplicateUser
+        } catch (e: FirebaseNetworkException) {
+            CreateAccountResult.ErrorNetwork
         } catch (e: FirebaseException) {
             CreateAccountResult.Error
         }

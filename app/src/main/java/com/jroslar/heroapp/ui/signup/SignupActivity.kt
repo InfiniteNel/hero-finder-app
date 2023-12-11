@@ -60,6 +60,7 @@ class SignupActivity : AppCompatActivity() {
         }
 
         if (state.isErrorDuplicateUser) showErrorDialog(R.string.signupErrorDialogDuplicateUserTitle, R.string.signupErrorDialogDuplicateUserBody)
+        if (state.isErrorNetwork) showErrorDialog(R.string.signupErrorDialogNetworkTitle, R.string.signupErrorDialogBody)
         if (state.isError) showErrorDialog(R.string.signupErrorDialogTitle, R.string.signupErrorDialogBody)
         if (state.isSuccess) navigateToMain()
     }

@@ -48,8 +48,9 @@ class SignupViewModel @Inject constructor(
                 CreateAccountResult.ErrorDuplicateUser -> _state.value = SignupState(isErrorDuplicateUser = true)
                 CreateAccountResult.Error -> _state.value = SignupState(isError = true)
                 CreateAccountResult.Success -> _state.value = SignupState(isSuccess = true)
+                CreateAccountResult.ErrorNetwork -> _state.value = SignupState(isErrorNetwork = true)
             }
-            _state.value = SignupState(isLoading = false, isError = false, isErrorDuplicateUser = false, isSuccess = false)
+            _state.value = SignupState(isLoading = false, isError = false, isErrorNetwork = false, isErrorDuplicateUser = false, isSuccess = false)
         }
     }
 

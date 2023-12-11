@@ -8,6 +8,7 @@ data class SignupState (
     val isValidRepeatPassword: Boolean = true,
     val isError: Boolean = false,
     val isErrorDuplicateUser: Boolean = false,
+    val isErrorNetwork: Boolean = false,
     val isSuccess: Boolean = false,
 ) {
     fun userValidated() = isValidEmail && isValidUsername && isValidPassword && isValidRepeatPassword

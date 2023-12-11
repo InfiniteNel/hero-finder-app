@@ -64,10 +64,11 @@
     <string name="ErrorUsername">El usuario debe contener al menos 6 caracteres</string>
     <string name="ErrorRepeatPassword">La contraseña no coincide</string>
     <string name="signupErrorDialogTitle">Ha ocurrido un error</string>
-    <string name="signupErrorDialogBody">No hemos podido crear tu cuenta, inténtalo de nuevo más tarde</string>
+    <string name="signupErrorDialogBody">No hemos podido crear su cuenta, inténtalo de nuevo más tarde</string>
     <string name="signupErrorDialogPositiveAction">Aceptar</string>
     <string name="signupErrorDialogDuplicateUserTitle">El usuario ya existe</string>
     <string name="signupErrorDialogDuplicateUserBody">El email ya esta registrado con otro usuario </string>
+    <string name="signupErrorDialogNetworkTitle">Sin conexión a la pagina</string>
 
     <!-- ForgotPasswordActivity -->
     <string name="btForgotpasswordText">Enviar email</string>
