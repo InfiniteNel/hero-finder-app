@@ -43,6 +43,11 @@ Pantalla que muestra la información del Héroe seleccionado en la pantalla Sear
 
 Pantalla que muestra una tarjeta que al hacer clic sobre la misma muestra un Héroe aleatorio de la API. Al hacer scroll hacia abajo hace una petición de un nuevo Héroe aleatorio a la API y muestra nuevamente la tarjeta vacía. Al hacer clic sobre la tarjeta con el Héroe revelado muestra la pantalla DetailHero con la información del Héroe.
 
+### FavHero
+![FavHero](https://i.imgur.com/JL0KUVk.png)
+
+Pantalla que muestra la información del usuario.
+
 ### Login
 ![Login](https://i.imgur.com/THQ9KOv.png)
 
